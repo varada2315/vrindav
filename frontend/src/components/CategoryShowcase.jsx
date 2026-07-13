@@ -10,12 +10,12 @@ const CategoryShowcase = ({ setCurrentPage }) => {
     {
       id: 'blended-masalas',
       title: 'Blended Masalas',
-      image: '/images/temp_69.png',
+      image: '/images/bowl_chili.png',
     },
     {
       id: 'seasoning-spices',
       title: 'Seasoning Spices',
-      image: '/images/temp_56.png',
+      image: '/images/bowl_oregano.png',
     },
     {
       id: 'dehydrated-products',
