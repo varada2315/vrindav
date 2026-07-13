@@ -2294,6 +2294,27 @@ img {
     grid-template-columns: 1fr !important;
     gap: 40px !important;
   }
+
+  /* SpiceList Homepage preview rows stacking */
+  .spice-row {
+    grid-template-columns: 1fr !important;
+    gap: 25px !important;
+    padding: 35px 25px !important;
+    text-align: center !important;
+  }
+
+  .spice-sketch-col {
+    justify-content: center !important;
+  }
+
+  .spice-image-col {
+    justify-content: center !important;
+  }
+
+  .spice-info-col {
+    align-items: center !important;
+    text-align: center !important;
+  }
 }
 
 @media (max-width: 768px) {
