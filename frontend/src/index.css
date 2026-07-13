@@ -2723,6 +2723,35 @@ img {
     grid-template-columns: 1fr !important;
     gap: 15px !important;
   }
+
+  /* SpiceRow phone view overrides (reduce vertical card sizing) */
+  .spice-row {
+    padding: 25px 20px !important;
+    gap: 15px !important;
+    border-radius: 20px !important;
+  }
+  
+  .spice-sketch-wrapper {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  
+  .spice-img-circle {
+    width: 120px !important;
+    height: 120px !important;
+    border-width: 3px !important;
+  }
+  
+  .spice-info-col h3 {
+    font-size: 20px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .spice-info-col p {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 15px !important;
+  }
 }
 
 
