@@ -40,7 +40,7 @@ const IconGrid = () => {
     { 
       id: 8, 
       label: 'Peppers', 
-      iconUrl: 'https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/spice-shop-19.png' 
+      iconUrl: '/images/peppers_icon.png' 
     }
   ];
 

@@ -1,6 +1,75 @@
 import React from 'react';
 import { BotanicalBackgroundSVG, CorianderSketchSVG, BayLeavesSketchSVG, CardamomSketchSVG } from '../SpiceSketches';
 
+const certs = [
+  {
+    id: 'fssai',
+    title: 'FSSAI',
+    image: '/images/cert_fssai.png',
+    description: 'Food Safety & Standards Authority of India registration for certified food processing.'
+  },
+  {
+    id: 'apeda',
+    title: 'APEDA',
+    image: '/images/cert_apeda.png',
+    description: 'Agricultural & Processed Food Products Export Development Authority certification.'
+  },
+  {
+    id: 'iso',
+    title: 'ISO 22000',
+    image: '/images/cert_iso.png',
+    description: 'Food Safety Management System international compliance certification.'
+  },
+  {
+    id: 'spicesboard',
+    title: 'Spices Board India',
+    image: '/images/cert_spicesboard.png',
+    description: 'Ministry of Commerce & Industry certification for premium quality spice exports.'
+  },
+  {
+    id: 'halal',
+    title: 'HALAL Certified',
+    image: '/images/cert_halal.png',
+    description: 'Global standard compliance certifying products are processed under Halal guidelines.'
+  },
+  {
+    id: 'nongmo',
+    title: 'NON GMO Verified',
+    image: '/images/cert_nongmo.png',
+    description: 'Product verification assuring ingredients are completely free from genetically modified organisms.'
+  },
+  {
+    id: 'haccp',
+    title: 'HACCP Certified',
+    image: '/images/cert_haccp.png',
+    description: 'Hazard Analysis Critical Control Point standard for systemic hazard prevention.'
+  },
+  {
+    id: 'fda',
+    title: 'U.S. FDA Registered',
+    image: '/images/cert_fda.png',
+    description: 'Registration with the United States Food and Drug Administration for import clearance.'
+  },
+  {
+    id: 'ghp',
+    title: 'GHP Certified',
+    image: '/images/cert_ghp.png',
+    description: 'Good Hygiene Practices certification for pristine sanitary manufacturing standards.'
+  },
+  {
+    id: 'gst',
+    title: 'GST Registered',
+    image: '/images/cert_gst.png',
+    description: 'Goods and Services Tax registration under the Government of India for transparent invoicing.'
+  },
+  {
+    id: 'dgft',
+    title: 'DGFT (IEC)',
+    image: '/images/cert_dgft.png',
+    description: 'Directorate General of Foreign Trade registration and Import Export Code (IEC) compliance.'
+  }
+];
+
 const AboutPage = ({ setCurrentPage }) => {
   return (
     <div className="about-page-container" style={{ paddingTop: '0px', backgroundColor: 'var(--bg-primary)', minHeight: '100vh' }}>
@@ -57,15 +126,15 @@ const AboutPage = ({ setCurrentPage }) => {
           className="decor-rosemary decor-rosemary-left"
         />
         <div className="container">
-          <div style={styles.storyGrid}>
+          <div className="about-story-grid" style={styles.storyGrid}>
             <div style={styles.storyTextCol}>
               <h2 style={styles.sectionHeader}>Our Journey & Story</h2>
               <div style={styles.accentBar}></div>
               <p style={styles.paragraph}>
-                Vrindav Enterprises is a trusted supplier and exporter of pure and natural spices, committed to delivering high-quality ingredients sourced directly from local farmers. Under the leadership of Parikshit Ramani, we began with a simple but strong belief: that every kitchen deserves access to the rich aroma, authentic taste, and maximum freshness of unadulterated agro-products.
+                Vrindav Enterprises is a professionally managed spices exporter based in Rajnandgaon, Chhattisgarh, with deep roots in agricultural sourcing and modern processing capabilities. We supply high-quality spices and food products to global importers, traders, wholesalers, and food brands.
               </p>
               <p style={styles.paragraph}>
-                We process, pack, and export a wide range of over 50+ premium spices, including blended spices, custom seasoning spices, dehydrated food products, and certified Organic Spices & Herbal Products. Our commitment to 100% purity ensures that every batch meets rigorous international standards of hygiene, flavor retention, and color consistency.
+                Beyond whole spices, our portfolio has grown to include powdered spices, superfoods, oilseeds, millets, staples, and FMCG goods serving global markets with reliability and transparency.
               </p>
             </div>
             
@@ -94,7 +163,7 @@ const AboutPage = ({ setCurrentPage }) => {
           className="decor-leaf decor-leaf-right"
         />
         <div className="container">
-          <div style={styles.missionVisionGrid}>
+          <div className="about-mission-grid" style={styles.missionVisionGrid}>
             
             {/* Mission Card */}
             <div className="promo-card-3" style={styles.mvCard}>
@@ -134,7 +203,7 @@ const AboutPage = ({ setCurrentPage }) => {
             We adhere to strict quality regulations to ensure export-grade quality.
           </p>
           
-          <div style={styles.badgesGrid}>
+          <div className="about-badges-grid" style={styles.badgesGrid}>
             <div style={styles.badgeItem}>
               <div style={styles.badgeIcon}>
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-rust)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -177,6 +246,38 @@ const AboutPage = ({ setCurrentPage }) => {
               <h4 style={styles.badgeTitle}>B2B Global Exporter</h4>
               <p style={styles.badgeDesc}>Dependable container logistics supplying bulk food wholesalers internationally.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quality Assurance & Certifications Section */}
+      <section className="decor-container" style={{ padding: '80px 0', backgroundColor: '#ffffff', borderTop: '1px solid rgba(0,0,0,0.05)' }}>
+        <div className="decor-sketch decor-sketch-tl" style={{ opacity: 0.15 }}>
+          <CorianderSketchSVG />
+        </div>
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '50px' }}>
+            <h2 style={styles.sectionHeader}>Quality & Certifications</h2>
+            <div style={{ ...styles.accentBar, margin: '15px auto 25px auto' }}></div>
+            <p style={{ ...styles.paragraph, maxWidth: '700px', margin: '0 auto', fontSize: '15px', textAlign: 'center' }}>
+              We adhere to the highest international food safety, hygiene, and export standards. Our products undergo rigorous quality checks to ensure compliance with global regulatory frameworks.
+            </p>
+          </div>
+          
+          <div className="certs-grid">
+            {certs.map((cert) => (
+              <div key={cert.id} className="cert-card">
+                <div className="cert-image-wrapper">
+                  <img 
+                    src={cert.image} 
+                    alt={cert.title} 
+                    className="cert-img"
+                  />
+                </div>
+                <h4 className="cert-title">{cert.title}</h4>
+                <p className="cert-desc">{cert.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -56,7 +56,7 @@ const ContactPage = () => {
       {/* Contact Grid Section */}
       <section style={{ padding: '60px 0' }}>
         <div className="container">
-          <div style={styles.grid}>
+          <div className="contact-page-grid" style={styles.grid}>
             
             {/* Left: Contact Info details */}
             <div style={styles.infoCol}>

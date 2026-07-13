@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import SpecialtyGrid from './components/SpecialtyGrid';
 import AboutUs from './components/AboutUs';
+import StatsSection from './components/StatsSection';
 import IconGrid from './components/IconGrid';
 import OurSpices from './components/OurSpices';
 import SpiceList from './components/SpiceList';
@@ -129,6 +130,7 @@ const App = () => {
             <Hero setCurrentPage={setCurrentPage} />
             <SpecialtyGrid setCurrentPage={setCurrentPage} />
             <AboutUs setCurrentPage={setCurrentPage} />
+            <StatsSection />
             <IconGrid />
             <OurSpices />
             <SpiceList spices={spices.slice(0, 3)} /> {/* Preview first 3 spices on homepage */}
@@ -149,59 +151,13 @@ const App = () => {
     }
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      const width = window.innerWidth;
-      const container = document.getElementById('layout-container');
-      const parent = document.getElementById('scale-parent');
-      
-      if (container && parent) {
-        if (width < 1200) {
-          const scale = width / 1200;
-          container.style.width = '1200px';
-          container.style.transform = `scale(${scale})`;
-          container.style.transformOrigin = 'top left';
-          
-          // Set parent height to match the scaled height
-          const rect = container.getBoundingClientRect();
-          parent.style.height = `${rect.height}px`;
-        } else {
-          container.style.width = '100%';
-          container.style.transform = 'none';
-          parent.style.height = 'auto';
-        }
-      }
-    };
-
-    const container = document.getElementById('layout-container');
-    let resizeObserver;
-    if (container) {
-      resizeObserver = new ResizeObserver(() => {
-        handleResize();
-      });
-      resizeObserver.observe(container);
-    }
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      if (resizeObserver) {
-        resizeObserver.disconnect();
-      }
-    };
-  }, [currentPage]);
-
   return (
-    <div id="scale-parent" style={{ overflow: 'hidden', width: '100%' }}>
-      <div id="layout-container">
-        <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        <main>
-          {renderPage()}
-        </main>
-        <Footer setCurrentPage={setCurrentPage} />
-      </div>
+    <div id="layout-container" style={{ width: '100%' }}>
+      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <main>
+        {renderPage()}
+      </main>
+      <Footer setCurrentPage={setCurrentPage} />
     </div>
   );
 };
