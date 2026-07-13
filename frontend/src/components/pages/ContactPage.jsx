@@ -45,24 +45,24 @@ const ContactPage = () => {
     <div style={{ paddingTop: '120px', backgroundColor: 'var(--bg-primary)', minHeight: '100vh', paddingBottom: '80px' }}>
       
       {/* Subpage Hero Header Section */}
-      <section className="subpage-hero" style={styles.subpageHero}>
-        <div className="hero-bg-shape" style={styles.subpageHeroBg}></div>
+      <section className="contact-hero-section">
+        <div className="contact-hero-bg-shape"></div>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          <h1 style={styles.subpageTitle}>Contact <span>Vrindav Enterprises</span></h1>
-          <p style={styles.subpageSubtitle}>Have questions about our products, certification, sample dispatches, or bulk exporting? Get in touch with us.</p>
+          <h1 className="contact-hero-title">Contact <span>Vrindav Enterprises</span></h1>
+          <p className="contact-hero-subtitle">Have questions about our products, certification, sample dispatches, or bulk exporting? Get in touch with us.</p>
         </div>
       </section>
 
       {/* Contact Grid Section */}
       <section style={{ padding: '60px 0' }}>
         <div className="container">
-          <div className="contact-page-grid" style={styles.grid}>
+          <div className="contact-page-grid">
             
             {/* Left: Contact Info details */}
             <div style={styles.infoCol}>
               <h2 style={{ fontSize: '32px', fontWeight: '800', marginBottom: '30px' }}>Communication Channels</h2>
               
-              <div style={styles.infoBox}>
+              <div className="contact-info-box">
                 <div style={styles.infoIcon}>📞</div>
                 <div>
                   <h4>Phone & WhatsApp</h4>
@@ -79,7 +79,7 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              <div style={styles.infoBox}>
+              <div className="contact-info-box">
                 <div style={styles.infoIcon}>✉️</div>
                 <div>
                   <h4>Official Business Email</h4>
@@ -88,7 +88,7 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              <div style={styles.infoBox}>
+              <div className="contact-info-box">
                 <div style={styles.infoIcon}>🏢</div>
                 <div>
                   <h4>Export Division / Office</h4>
@@ -120,8 +120,8 @@ const ContactPage = () => {
             </div>
 
             {/* Right: Contact Form */}
-            <div style={styles.formCol}>
-              <div style={styles.formCard}>
+            <div className="contact-form-col">
+              <div className="contact-form-card">
                 <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '10px' }}>Send us a Message</h3>
                 <p style={{ fontSize: '14px', color: '#666', marginBottom: '24px' }}>Fill out the form below and our B2B representative will follow up.</p>
 

@@ -1792,6 +1792,67 @@ img {
   transition: transform 0.3s ease;
 }
 
+.contact-hero-section {
+  position: relative;
+  padding: 80px 0 100px;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-hero-bg-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  background-color: #0f172a;
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+  z-index: 1;
+}
+
+.contact-hero-title {
+  font-family: var(--font-title);
+  font-size: 56px;
+  font-weight: 800;
+  color: #111116;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.contact-hero-title span {
+  color: var(--color-rust);
+}
+
+.contact-hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  color: #55555d;
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+.contact-info-box {
+  display: flex;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+  margin-bottom: 24px;
+}
+
+.contact-form-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #d35400;
+}
+
 .b2b-section-header {
   font-family: var(--font-title);
   font-size: 36px;
@@ -2666,6 +2727,28 @@ img {
     gap: 40px !important;
   }
 
+  .contact-hero-section {
+    min-height: auto !important;
+    padding: 60px 0 !important;
+    background: #0f172a !important;
+    text-align: center !important;
+  }
+  
+  .contact-hero-bg-shape {
+    display: none !important;
+  }
+  
+  .contact-hero-title {
+    font-size: 44px !important;
+    color: #ffffff !important;
+  }
+  
+  .contact-hero-subtitle {
+    font-size: 16px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    margin: 0 auto !important;
+  }
+
   /* SpiceList Homepage preview rows stacking */
   .spice-row {
     grid-template-columns: 1fr !important;
@@ -2883,6 +2966,25 @@ img {
   .b2b-form-row {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
+  }
+
+  /* Contact Page Mobile Overrides */
+  .contact-hero-title {
+    font-size: 32px !important;
+  }
+  
+  .contact-hero-subtitle {
+    font-size: 14px !important;
+  }
+  
+  .contact-info-box {
+    padding: 20px !important;
+    gap: 15px !important;
+    margin-bottom: 16px !important;
+  }
+  
+  .contact-form-card {
+    padding: 25px 20px !important;
   }
 }
 
