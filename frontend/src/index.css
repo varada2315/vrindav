@@ -2538,6 +2538,60 @@ img {
     gap: 40px 20px !important;
   }
 
+  /* Subpage Hero Sections tablet overrides */
+  .about-hero-section,
+  .b2b-hero-section {
+    min-height: 460px !important;
+    background: #28221d !important;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('/images/about_hero_bg.jpg') center center / cover no-repeat !important;
+    padding: 65px 0 !important;
+  }
+  
+  .b2b-hero-section {
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('/images/b2b_hero_bg.jpg') center center / cover no-repeat !important;
+  }
+
+  .about-hero-grid,
+  .b2b-hero-grid {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+    gap: 30px !important;
+  }
+
+  .about-hero-content-col,
+  .b2b-hero-content-col {
+    align-items: center !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+
+  .about-hero-heading,
+  .b2b-hero-heading {
+    font-size: 60px !important;
+    margin-bottom: 15px !important;
+  }
+
+  .about-hero-description,
+  .b2b-hero-description {
+    margin: 0 auto 25px auto !important;
+  }
+
+  .about-hero-image-col,
+  .b2b-hero-image-col {
+    display: none !important;
+  }
+
+  .b2b-hero-banner-title,
+  .products-hero-banner-title {
+    font-size: 44px !important;
+  }
+
+  .b2b-hero-banner-section,
+  .products-hero-banner-section {
+    min-height: 360px !important;
+    padding: 65px 0 !important;
+  }
+
   /* Subpage Overrides (About Page) */
   .about-story-grid {
     grid-template-columns: 1fr !important;
@@ -2672,6 +2726,30 @@ img {
   
   h2, .circle-text-content h2 {
     font-size: 30px !important;
+  }
+
+  /* Subpage Hero Titles on Mobile */
+  .about-hero-heading,
+  .b2b-hero-heading {
+    font-size: 44px !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .about-hero-description,
+  .b2b-hero-description {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+  }
+  
+  .b2b-hero-banner-title,
+  .products-hero-banner-title {
+    font-size: 32px !important;
+  }
+  
+  .b2b-hero-banner-section,
+  .products-hero-banner-section {
+    min-height: 260px !important;
+    padding: 50px 0 !important;
   }
   
   /* Stats Grid */
