@@ -48,22 +48,24 @@ const Testimonial = () => {
       </div>
       
       <div className="container testimonial-container">
-        {reviews.map((rev, idx) => (
-          <div 
-            key={rev.id} 
-            style={{
-              display: idx === activeIndex ? 'block' : 'none',
-              animation: 'fadeIn 0.6s ease-in-out'
-            }}
-          >
-            <blockquote className="testimonial-quote">
-              "{rev.quote}"
-            </blockquote>
-            <div className="testimonial-author">
-              &mdash; {rev.author}
+        <div className="testimonial-card">
+          {reviews.map((rev, idx) => (
+            <div 
+              key={rev.id} 
+              style={{
+                display: idx === activeIndex ? 'block' : 'none',
+                animation: 'fadeIn 0.6s ease-in-out'
+              }}
+            >
+              <blockquote className="testimonial-quote">
+                "{rev.quote}"
+              </blockquote>
+              <div className="testimonial-author">
+                &mdash; {rev.author}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
 
         {/* Carousel Slide Indicators */}
         <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '40px' }}>
