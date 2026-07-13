@@ -2137,37 +2137,80 @@ img {
     gap: 30px 20px !important;
   }
 
-  /* Our Spices Section */
+  /* Our Spices Section Mobile Overrides */
   .circle-section {
     padding: 60px 0 !important;
-    background-size: cover !important;
+    background-color: #f3f3f1 !important;
+    background-image: url('/images/our_spices_bg.png') !important;
+    background-size: 290px !important;
+    background-position: center 25% !important;
+    background-repeat: no-repeat !important;
+  }
+  
+  .circle-row-top {
+    margin-bottom: 15px !important;
+  }
+
+  .circle-bowl-top-img {
+    max-width: 140px !important;
+    height: auto !important;
+    margin: 0 auto !important;
   }
   
   .circle-row-bottom {
-    grid-template-columns: 1fr !important;
-    gap: 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 25px !important;
+    margin-top: 15px !important;
+  }
+  
+  .circle-col-left {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  .circle-image-bottom-wrap {
+    max-width: 155px !important;
+    width: 100% !important;
   }
   
   .circle-bowl-bottom-img {
     margin-left: 0 !important;
     margin-top: 0 !important;
-    max-width: 70% !important;
+    width: 100% !important;
+    max-width: 155px !important;
+    height: auto !important;
     margin: 0 auto !important;
+  }
+  
+  .circle-col-right {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
   }
   
   .circle-text-content {
     padding-left: 0 !important;
     align-items: center !important;
     text-align: center !important;
+    max-width: 100% !important;
   }
   
   .circle-text-content h2 {
-    font-size: 60px !important;
+    font-size: 40px !important;
+    line-height: 1.15 !important;
+    color: var(--text-dark) !important;
+    margin-bottom: 12px !important;
   }
   
   .circle-text-content p {
-    max-width: 600px !important;
+    font-size: 13.5px !important;
+    color: var(--text-body) !important;
+    max-width: 500px !important;
     margin: 0 auto !important;
+    line-height: 1.7 !important;
   }
 
   /* Testimonials */
