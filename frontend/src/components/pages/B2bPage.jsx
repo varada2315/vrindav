@@ -106,7 +106,7 @@ const B2bPage = () => {
           <div className="b2b-grid-row">
             
             <div style={styles.textCol}>
-              <h2 style={styles.sectionHeader}>Why Partner with Vrindav Enterprises?</h2>
+              <h2 className="b2b-section-header">Why Partner with Vrindav Enterprises?</h2>
               <div style={styles.accentBar}></div>
               
               <div style={styles.strengthItem}>
@@ -135,7 +135,7 @@ const B2bPage = () => {
             </div>
 
             <div id="b2b-quote-form" style={styles.formCol}>
-              <div style={styles.formCard}>
+              <div className="b2b-form-card">
                 <h3 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '8px', color: '#111116' }}>Bulk Quote Request</h3>
                 <p style={{ fontSize: '13px', color: '#666', marginBottom: '20px' }}>Fill out the form below to receive a custom commercial quotation.</p>
 
@@ -146,7 +146,7 @@ const B2bPage = () => {
                   </div>
                 ) : (
                   <form onSubmit={handleFormSubmit} style={styles.form}>
-                    <div style={styles.formRow}>
+                    <div className="b2b-form-row">
                       <div style={styles.formGroup}>
                         <label style={styles.label}>Company Name</label>
                         <input
@@ -173,7 +173,7 @@ const B2bPage = () => {
                       </div>
                     </div>
 
-                    <div style={styles.formRow}>
+                    <div className="b2b-form-row">
                       <div style={styles.formGroup}>
                         <label style={styles.label}>Work Email</label>
                         <input
@@ -200,7 +200,7 @@ const B2bPage = () => {
                       </div>
                     </div>
 
-                    <div style={styles.formRow}>
+                    <div className="b2b-form-row">
                       <div style={styles.formGroup}>
                         <label style={styles.label}>Product Required</label>
                         <select
