@@ -1,6 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const CategoryShowcase = ({ setCurrentPage }) => {
+  const [animate, setAnimate] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimate(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   const categories = [
     {
       id: 'spice-products',
@@ -25,7 +44,7 @@ const CategoryShowcase = ({ setCurrentPage }) => {
   ];
 
   return (
-    <section className="category-showcase-section">
+    <section className="category-showcase-section" ref={sectionRef}>
       <div className="container">
         <h2 className="category-showcase-title">Our Premium Ranges</h2>
         <p className="category-showcase-subtitle">
@@ -34,11 +53,12 @@ const CategoryShowcase = ({ setCurrentPage }) => {
       </div>
 
       <div className="category-showcase-grid">
-        {categories.map((cat) => (
+        {categories.map((cat, index) => (
           <div 
             key={cat.id} 
-            className="category-showcase-card"
+            className={`category-showcase-card${animate ? ' animate-in' : ''}`}
             onClick={() => setCurrentPage('products')}
+            style={{ transitionDelay: `${index * 150}ms` }}
           >
             <div 
               className="category-showcase-card-bg"
