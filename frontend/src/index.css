@@ -2496,6 +2496,10 @@ img {
     margin-bottom: 15px !important;
   }
 
+  .testimonial-bg-leaf {
+    display: none !important;
+  }
+
   /* Contact Home Section */
   .contact-section {
     padding: 60px 0 !important;
