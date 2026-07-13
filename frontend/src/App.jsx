@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import SpecialtyGrid from './components/SpecialtyGrid';
 import AboutUs from './components/AboutUs';
 import StatsSection from './components/StatsSection';
+import CategoryShowcase from './components/CategoryShowcase';
 import IconGrid from './components/IconGrid';
 import OurSpices from './components/OurSpices';
 import SpiceList from './components/SpiceList';
@@ -131,6 +132,7 @@ const App = () => {
             <SpecialtyGrid setCurrentPage={setCurrentPage} />
             <AboutUs setCurrentPage={setCurrentPage} />
             <StatsSection />
+            <CategoryShowcase setCurrentPage={setCurrentPage} />
             <IconGrid />
             <OurSpices />
             <SpiceList spices={spices.slice(0, 3)} /> {/* Preview first 3 spices on homepage */}
