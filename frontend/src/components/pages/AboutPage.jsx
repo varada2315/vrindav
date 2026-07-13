@@ -1,6 +1,114 @@
 import React from 'react';
 import { BotanicalBackgroundSVG, CorianderSketchSVG, BayLeavesSketchSVG, CardamomSketchSVG } from '../SpiceSketches';
 
+const trustStandards = [
+  {
+    id: 'quality',
+    title: 'Premium Quality',
+    description: 'Carefully sourced raw materials selected for superior color, aroma, purity, and consistency across every batch.',
+    highlighted: false,
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="8" r="7" />
+        <path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12" />
+      </svg>
+    )
+  },
+  {
+    id: 'hygiene',
+    title: 'Hygienic Processing',
+    description: 'Processed in clean, controlled environments following strict hygiene standards to ensure food-safe, pure products.',
+    highlighted: false,
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M10 2h4" />
+        <path d="M12 2v4" />
+        <path d="M6 18V9c0-1.85 1.15-3.5 3-4h6c1.85.5 3 2.15 3 4v9a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4z" />
+        <circle cx="12" cy="13" r="1.5" />
+      </svg>
+    )
+  },
+  {
+    id: 'bulk',
+    title: 'Bulk Supply Ready',
+    description: 'Reliable and scalable bulk supply for wholesalers, distributors, food manufacturers, and restaurant chains.',
+    highlighted: true,
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+        <line x1="12" y1="22.08" x2="12" y2="12" />
+      </svg>
+    )
+  },
+  {
+    id: 'pricing',
+    title: 'Competitive Pricing',
+    description: 'Wholesale pricing structured for long-term business partnerships — giving you the best value without compromising on quality.',
+    highlighted: false,
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l5.58-5.58c.94-.94.94-2.48 0-3.42L12 2z" />
+        <circle cx="5" cy="5" r="1.5" />
+      </svg>
+    )
+  },
+  {
+    id: 'partnerships',
+    title: 'Long-Term Partnerships',
+    description: 'We build lasting B2B relationships built on trust, consistency, and a deep understanding of your business needs.',
+    highlighted: false,
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    )
+  },
+  {
+    id: 'delivery',
+    title: 'Pan-India Delivery',
+    description: 'Efficient logistics and timely delivery across India — ensuring your supply chain never faces disruptions.',
+    highlighted: false,
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="1" y="3" width="15" height="13" />
+        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+        <circle cx="5.5" cy="18.5" r="2.5" />
+        <circle cx="18.5" cy="18.5" r="2.5" />
+      </svg>
+    )
+  },
+  {
+    id: 'purity',
+    title: 'Purity Guaranteed',
+    description: 'No artificial colors, fillers, or additives. Every product is 100% natural and tested for purity before dispatch.',
+    highlighted: false,
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6 3h12" />
+        <path d="M12 3v12" />
+        <path d="M9 15h6" />
+        <path d="M5.5 21h13c.9 0 1.5-.8 1.1-1.6L15 11.2V3H9v8.2L4.4 19.4c-.4.8.2 1.6 1.1 1.6z" />
+      </svg>
+    )
+  },
+  {
+    id: 'support',
+    title: 'Dedicated Support',
+    description: 'Responsive B2B support via WhatsApp and email — quick answers on pricing, samples, and order fulfilment.',
+    highlighted: false,
+    icon: (
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+      </svg>
+    )
+  }
+];
+
 const certs = [
   {
     id: 'fssai',
@@ -200,52 +308,22 @@ const AboutPage = ({ setCurrentPage }) => {
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '10px' }}>Trust & Quality Standards</h2>
           <p style={{ color: '#55555d', marginBottom: '50px', maxWidth: '600px', margin: '0 auto 50px' }}>
-            We adhere to strict quality regulations to ensure export-grade quality.
+            We adhere to strict quality regulations and export-grade processes.
           </p>
           
-          <div className="about-badges-grid" style={styles.badgesGrid}>
-            <div style={styles.badgeItem}>
-              <div style={styles.badgeIcon}>
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-rust)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                  <line x1="12" y1="22.08" x2="12" y2="12" />
-                </svg>
+          <div className="trust-standards-grid">
+            {trustStandards.map((item) => (
+              <div 
+                key={item.id} 
+                className={`trust-standard-card${item.highlighted ? ' highlighted' : ''}`}
+              >
+                <div className="trust-standard-card-icon-wrap">
+                  {item.icon}
+                </div>
+                <h4 className="trust-standard-card-title">{item.title}</h4>
+                <p className="trust-standard-card-desc">{item.description}</p>
               </div>
-              <h4 style={styles.badgeTitle}>Hygienically Packed</h4>
-              <p style={styles.badgeDesc}>Modern vacuum-sealed packing processes to lock in absolute fresh aroma.</p>
-            </div>
-            <div style={styles.badgeItem}>
-              <div style={styles.badgeIcon}>
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-green)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a7.5 7.5 0 0 1-9 10z" />
-                  <path d="M19 2c-2.26 4.33-5.27 7.14-8 10" />
-                </svg>
-              </div>
-              <h4 style={styles.badgeTitle}>100% Pure & Natural</h4>
-              <p style={styles.badgeDesc}>Direct farmer sourcing with zero chemical additives or artificial coloring agents.</p>
-            </div>
-            <div style={styles.badgeItem}>
-              <div style={styles.badgeIcon}>
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-              </div>
-              <h4 style={styles.badgeTitle}>Certifications</h4>
-              <p style={styles.badgeDesc}>Fully compliant with ISO, FSSAI, and Spices Board standards for exports.</p>
-            </div>
-            <div style={styles.badgeItem}>
-              <div style={styles.badgeIcon}>
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-navy-dark)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="2" y1="12" x2="22" y2="12" />
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                </svg>
-              </div>
-              <h4 style={styles.badgeTitle}>B2B Global Exporter</h4>
-              <p style={styles.badgeDesc}>Dependable container logistics supplying bulk food wholesalers internationally.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
