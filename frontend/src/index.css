@@ -1069,10 +1069,10 @@ img {
 .testimonial-quote {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 34px;
-  line-height: 1.6;
+  font-size: 24px;
+  line-height: 1.65;
   color: var(--text-dark);
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .testimonial-author {
@@ -2217,6 +2217,12 @@ img {
   .testimonials-grid {
     grid-template-columns: 1fr !important;
     gap: 30px !important;
+  }
+  
+  .testimonial-quote {
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    margin-bottom: 15px !important;
   }
 
   /* Contact Home Section */
