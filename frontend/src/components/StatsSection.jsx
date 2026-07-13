@@ -1,13 +1,76 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
+const CountUp = ({ end, duration = 1800, suffix = '' }) => {
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStarted(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!started) return;
+
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      // Ease out cubic for a natural deceleration curve
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentValue = Math.floor(easeProgress * end);
+      setCount(currentValue);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      } else {
+        setCount(end);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }, [started, end, duration]);
+
+  return <span ref={elementRef}>{count}{suffix}</span>;
+};
 
 const StatsSection = () => {
+  const [animate, setAnimate] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimate(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+
   const stats = [
     {
       id: 'products',
-      value: '50+',
+      value: 50,
+      suffix: '+',
       label: 'Spice Products',
       description: 'Premium powders, custom blends, seasonings, and dehydrated varieties.',
-      // Spice seed/leaf outline icon
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="stat-icon-svg">
           <path d="M12 2L2 7l10 5 10-5-10-5z" />
@@ -18,10 +81,10 @@ const StatsSection = () => {
     },
     {
       id: 'purity',
-      value: '100%',
+      value: 100,
+      suffix: '%',
       label: 'Natural & Pure',
       description: 'Zero fillers, zero artificial additives, completely pesticide-free.',
-      // Bio leaf outline icon
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="stat-icon-svg">
           <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a7.5 7.5 0 0 1-9 10z" />
@@ -31,10 +94,10 @@ const StatsSection = () => {
     },
     {
       id: 'orders',
-      value: '500+',
+      value: 500,
+      suffix: '+',
       label: 'Bulk Orders Fulfilled',
       description: 'Timely bulk shipments delivering consistency to corporate and wholesale clients.',
-      // Delivery package box outline icon
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="stat-icon-svg">
           <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
@@ -45,10 +108,10 @@ const StatsSection = () => {
     },
     {
       id: 'distribution',
-      value: '24+',
+      value: 24,
+      suffix: '+',
       label: 'States Supplied',
       description: 'Seamless logistics chain spanning the length and breadth of India.',
-      // Map pin/network outline icon
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="stat-icon-svg">
           <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
@@ -59,7 +122,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="stats-section">
+    <section className="stats-section" ref={sectionRef}>
       {/* Decorative leaf background */}
       <img 
         src="https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/spice-shop-38.png" 
@@ -68,12 +131,18 @@ const StatsSection = () => {
       />
       <div className="container">
         <div className="stats-grid">
-          {stats.map((stat) => (
-            <div key={stat.id} className="stat-card">
+          {stats.map((stat, index) => (
+            <div 
+              key={stat.id} 
+              className={`stat-card${animate ? ' animate-in' : ''}`}
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
               <div className="stat-icon-container">
                 {stat.icon}
               </div>
-              <h3 className="stat-value">{stat.value}</h3>
+              <h3 className="stat-value">
+                <CountUp end={stat.value} suffix={stat.suffix} />
+              </h3>
               <h4 className="stat-label">{stat.label}</h4>
               <p className="stat-description">{stat.description}</p>
             </div>
