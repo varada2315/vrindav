@@ -45,7 +45,7 @@ const StatsSection = () => {
     },
     {
       id: 'distribution',
-      value: '28+',
+      value: '24+',
       label: 'States Supplied',
       description: 'Seamless logistics chain spanning the length and breadth of India.',
       // Map pin/network outline icon
