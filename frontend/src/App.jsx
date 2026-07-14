@@ -56,7 +56,7 @@ const App = () => {
           },
           {
             id: "moringa",
-            name: "Herbal Moringa Powder",
+            name: "Organic Moringa Powder",
             category: "Natural Spices & Herbal Products",
             subtitle: "Nutritional Herbal Supplement",
             description: "Finely ground dehydrated moringa leaves loaded with vitamins and antioxidants. Popularly sourced for dietary supplements, health foods, and herbal wellness recipes.",
