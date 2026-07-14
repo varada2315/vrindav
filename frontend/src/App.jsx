@@ -130,7 +130,7 @@ const App = () => {
           <>
             <Hero setCurrentPage={setCurrentPage} />
             <SpecialtyGrid setCurrentPage={setCurrentPage} />
-            <AboutUs setCurrentPage={setCurrentPage} />
+            <AboutUs />
             <StatsSection />
             <CategoryShowcase setCurrentPage={setCurrentPage} />
             <IconGrid />
