@@ -35,11 +35,8 @@ const AboutUs = () => {
             <div className="about-value-item">
               <div className="about-value-icon-wrapper theme-green">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="about-value-icon">
-                  <path d="M7 20h10" />
-                  <path d="M10 20c5.5-2.5 8-6.4 8-12" />
-                  <path d="M12 11.5a14.7 14.7 0 0 0-4.5-3.5 15.5 15.5 0 0 0-1.4 7" />
-                  <path d="M12 14c-1.5-2-3.5-3-5.5-3" />
-                  <path d="M14 6c-2 0-3.5 1-4.5 2.5" />
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 8a7.5 7.5 0 0 1-9 10z" />
+                  <path d="M9 22v-4" />
                 </svg>
               </div>
               <div className="about-value-text">
