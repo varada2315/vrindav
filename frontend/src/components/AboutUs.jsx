@@ -33,9 +33,13 @@ const AboutUs = () => {
           {/* Left Column: Brand Commitments */}
           <div className="about-values-col">
             <div className="about-value-item">
-              <div className="about-value-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="about-value-icon">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+              <div className="about-value-icon-wrapper theme-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="about-value-icon">
+                  <path d="M7 20h10" />
+                  <path d="M10 20c5.5-2.5 8-6.4 8-12" />
+                  <path d="M12 11.5a14.7 14.7 0 0 0-4.5-3.5 15.5 15.5 0 0 0-1.4 7" />
+                  <path d="M12 14c-1.5-2-3.5-3-5.5-3" />
+                  <path d="M14 6c-2 0-3.5 1-4.5 2.5" />
                 </svg>
               </div>
               <div className="about-value-text">
@@ -45,9 +49,10 @@ const AboutUs = () => {
             </div>
             
             <div className="about-value-item">
-              <div className="about-value-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="about-value-icon">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+              <div className="about-value-icon-wrapper theme-gold">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="about-value-icon">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 11 2 2 4-4" />
                 </svg>
               </div>
               <div className="about-value-text">
@@ -57,9 +62,11 @@ const AboutUs = () => {
             </div>
             
             <div className="about-value-item">
-              <div className="about-value-icon-wrapper">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="about-value-icon">
-                  <polyline points="20 6 9 17 4 12"></polyline>
+              <div className="about-value-icon-wrapper theme-rust">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="about-value-icon">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                  <path d="M2 12h20" />
                 </svg>
               </div>
               <div className="about-value-text">

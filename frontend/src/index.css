@@ -854,30 +854,56 @@ img {
 .about-value-item {
   display: flex;
   align-items: flex-start;
-  gap: 18px;
-  transition: var(--transition-smooth);
+  gap: 20px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .about-value-item:hover {
-  transform: translateX(5px);
+  transform: translateY(-3px);
+  background-color: var(--bg-white);
+  border-color: rgba(208, 92, 61, 0.08);
+  box-shadow: 0 10px 30px rgba(32, 41, 47, 0.04);
 }
 
 .about-value-icon-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 38px;
-  height: 38px;
-  background-color: rgba(208, 92, 61, 0.1);
-  color: var(--color-rust);
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   flex-shrink: 0;
   margin-top: 2px;
+  transition: transform 0.4s ease;
+}
+
+.about-value-item:hover .about-value-icon-wrapper {
+  transform: scale(1.1);
+}
+
+/* Theme color variations for brand commitments */
+.about-value-icon-wrapper.theme-green {
+  background-color: rgba(108, 140, 76, 0.1);
+  color: var(--color-green);
+}
+
+.about-value-icon-wrapper.theme-gold {
+  background-color: rgba(229, 169, 59, 0.1);
+  color: var(--color-gold);
+}
+
+.about-value-icon-wrapper.theme-rust {
+  background-color: rgba(208, 92, 61, 0.1);
+  color: var(--color-rust);
 }
 
 .about-value-icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 .about-value-text {
