@@ -35,10 +35,13 @@ const SpecialtyGrid = ({ setCurrentPage }) => {
           <div className="specialty-grid">
 
             {/* Column 1: Tall Card with ground spice background (spans Row 1 & Row 2) */}
-            <div className="specialty-tall-card">
+            <div 
+              className="specialty-tall-card"
+              style={{ backgroundImage: `url('/images/card_ground_spices.png')` }}
+            >
               <div className="specialty-tall-card-content">
                 <Zigzag color="#e5a93b" />
-                <h3>Whole &<br />Ground Spices</h3>
+                <h3>Spice<br />Products</h3>
                 <button
                   onClick={() => setCurrentPage('products')}
                   className="btn-rect btn-rect-white"
@@ -48,11 +51,20 @@ const SpecialtyGrid = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            {/* Column 2, Row 1: Image Card (Rosemary on Slate) */}
+            {/* Column 2, Row 1: Category Card (Blended Masalas) */}
             <div
-              className="specialty-img-card specialty-card-rosemary"
-              style={{ backgroundImage: `url('https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/spice-shop-06.jpg')` }}
-            ></div>
+              className="specialty-img-card specialty-card-masalas"
+              style={{ backgroundImage: `url('/images/bowl_chili.png')` }}
+              onClick={() => setCurrentPage('products')}
+            >
+              <div className="specialty-img-card-content">
+                <Zigzag color="#e5a93b" />
+                <h3>Blended Masalas</h3>
+                <button className="btn-rect btn-rect-white">
+                  Browse
+                </button>
+              </div>
+            </div>
 
             {/* Column 3, Row 1: Text Card (50+ Spice Varieties) */}
             <div className="specialty-text-card specialty-card-recipes">
@@ -69,26 +81,35 @@ const SpecialtyGrid = ({ setCurrentPage }) => {
               </button>
             </div>
 
-            {/* Column 2, Row 2: Text Card (Organic) */}
+            {/* Column 2, Row 2: Category Card (Seasoning Spices) */}
             <div className="specialty-text-card specialty-card-organic">
               <Zigzag color="#6c8c4c" />
-              <h3>Organic & Herbal</h3>
+              <h3>Seasoning Spices</h3>
               <p>
-                100% pure organic spices and herbal products verified free of pesticides and chemicals.
+                Exquisite seasoning spice blends to elevate the flavor of your culinary creations.
               </p>
               <button
                 onClick={() => setCurrentPage('products')}
                 className="btn-rect btn-rect-green"
               >
-                Shop
+                Browse
               </button>
             </div>
 
-            {/* Column 3, Row 2: Image Card (Metal Spice Tin) */}
+            {/* Column 3, Row 2: Category Card (Dehydrated Food Products) */}
             <div
-              className="specialty-img-card specialty-card-tin"
-              style={{ backgroundImage: `url('https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/spice-shop-05.jpg')` }}
-            ></div>
+              className="specialty-img-card specialty-card-dehydrated"
+              style={{ backgroundImage: `url('/images/temp_59.png')` }}
+              onClick={() => setCurrentPage('products')}
+            >
+              <div className="specialty-img-card-content">
+                <Zigzag color="#e5a93b" />
+                <h3>Dehydrated<br />Food Products</h3>
+                <button className="btn-rect btn-rect-white">
+                  Browse
+                </button>
+              </div>
+            </div>
 
           </div>
         </div>
