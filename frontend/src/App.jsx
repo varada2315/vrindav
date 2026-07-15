@@ -246,7 +246,7 @@ const App = () => {
           {
             id: "pizza-masala",
             name: "Pizza Masala",
-            category: "Dehydrated Products",
+            category: "Seasoning & Blended Spices",
             subtitle: "Classic Herb & Spice Pizza Seasoning",
             description: "An aromatic blend of dehydrated oregano, basil, garlic, chilli flakes, and spices. Perfectly balanced to add the classic Italian pizzeria flavor to homemade pizzas, garlic breads, and toasted sandwiches.",
             image: "/images/pizza_masala.jpg",
@@ -255,7 +255,7 @@ const App = () => {
           {
             id: "peri-peri-masala",
             name: "Peri peri Masala",
-            category: "Dehydrated Products",
+            category: "Seasoning & Blended Spices",
             subtitle: "Spicy & Tangy African Bird's Eye Spice",
             description: "A fiery blend of dehydrated African bird's eye chilli, garlic, citrus notes, and warm spices. Imparts a sharp, tongue-tingling tangy heat to French fries, grilled paneer, and roasted snacks.",
             image: "/images/peri_peri_masala.jpg",
@@ -264,7 +264,7 @@ const App = () => {
           {
             id: "pav-bhaji-masala",
             name: "PavBhaji Masala",
-            category: "Dehydrated Products",
+            category: "Seasoning & Blended Spices",
             subtitle: "Authentic Mumbai Street Style Blend",
             description: "A rich, flavorful blend of dry mango, coriander, cumin, fennel, and star anise. Specifically formulated to give a robust, delicious Mumbai street food taste to mashed vegetable curries.",
             image: "/images/pav_bhaji_masala.jpg",
@@ -273,7 +273,7 @@ const App = () => {
           {
             id: "pasta-masala",
             name: "Pasta Masala",
-            category: "Dehydrated Products",
+            category: "Seasoning & Blended Spices",
             subtitle: "Herb-Infused Pasta Seasoning",
             description: "Crafted from select dry garlic, onion, pepper, and dehydrated Italian herbs. Designed to create a delicious, savory gravy base and coat pasta shells with a warm flavor profile.",
             image: "/images/pasta_masala.jpg",
@@ -282,7 +282,7 @@ const App = () => {
           {
             id: "papad-masala",
             name: "Papad Masala",
-            category: "Dehydrated Products",
+            category: "Seasoning & Blended Spices",
             subtitle: "Spicy Black Pepper Papad Seasoning",
             description: "A traditional blend of black pepper, asafoetida, cumin, and dry ginger. Sprinkled over raw and roasted papads to add a sharp, pungent bite and assist in digestion.",
             image: "/images/papad_masala.jpg",
