@@ -197,6 +197,51 @@ const App = () => {
             description: "Premium grade natural moringa leaves dried under shade and ground finely. Packed with rich nutrients and natural aroma, suitable for standard culinary and health food uses.",
             image: "/images/natural_moringa_powder.jpg",
             sketchKey: "dried_herbs"
+          },
+          {
+            id: "tomato-sweet-masala",
+            name: "Tomato sweet masala",
+            category: "Seasoning & Blended Spices",
+            subtitle: "Tangy & Sweet Seasoning Blend",
+            description: "A delicious blend of sweet, tangy tomato flavor and aromatic spices. Perfect for flavoring potato chips, popcorn, snacks, and finger foods.",
+            image: "/images/tomato_sweet_masala.jpg",
+            sketchKey: "chilli"
+          },
+          {
+            id: "shahi-biryani-masala",
+            name: "Shahi Biriyani masala",
+            category: "Seasoning & Blended Spices",
+            subtitle: "Royal Aromatic Spice Blend",
+            description: "Crafted from select royal spices like cardamom, mace, nutmeg, and cinnamon. Imparts a rich, celebratory aroma and authentic royal taste to slow-cooked rice and biryani dishes.",
+            image: "/images/shahi_biryani_masala.jpg",
+            sketchKey: "whole_spices"
+          },
+          {
+            id: "schezwan-masala",
+            name: "Schezwan masala",
+            category: "Seasoning & Blended Spices",
+            subtitle: "Fiery Indo-Chinese Seasoning",
+            description: "A robust blend of fiery red chillies, garlic, ginger, and Sichuan pepper. Adds the authentic, spicy-tangy kick of Indo-Chinese street style Schezwan cuisine to fried rice, noodles, and stir-fries.",
+            image: "/images/schezwan_masala.jpg",
+            sketchKey: "chilli"
+          },
+          {
+            id: "sambar-masala",
+            name: "Sambar Masala",
+            category: "Seasoning & Blended Spices",
+            subtitle: "Traditional South Indian Stew Spice",
+            description: "Authentic combination of roasted lentils, coriander, cumin, fenugreek, and red chillies. Creates the signature hearty aroma and tangy flavor of traditional South Indian lentil sambar stew.",
+            image: "/images/sambar_masala.jpg",
+            sketchKey: "ginger"
+          },
+          {
+            id: "sabji-masala",
+            name: "Sabji Masala",
+            category: "Seasoning & Blended Spices",
+            subtitle: "All-in-One Daily Vegetable Seasoning",
+            description: "A versatile everyday masala blend that enhances the natural taste of green vegetables and dry curries. Carefully balanced to provide delicious taste, texture, and aroma to daily meals.",
+            image: "/images/sabji_masala.jpg",
+            sketchKey: "ground_spices"
           }
         ]);
       } finally {
