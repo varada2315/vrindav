@@ -87,7 +87,7 @@ const App = () => {
             category: "Dehydrated Products",
             subtitle: "Pure Flavor & Zero Moisture",
             description: "Processed from fresh garlic cloves using advanced hygienic drying technology. Delivers robust garlic flavor with zero moisture clumping, ideal for seasoning packs.",
-            image: "/images/bowl_salt.png",
+            image: "/images/dehydrated_garlic.jpg",
             sketchKey: "ground_spices"
           },
           {
@@ -106,6 +106,96 @@ const App = () => {
             subtitle: "Certified Superfood Powder",
             description: "Strictly organic moringa leaf powder. Verified free of pesticides, processed hygienically under temperature-controlled settings to preserve natural nutrition profiles.",
             image: "/images/bowl_oregano.png",
+            sketchKey: "dried_herbs"
+          },
+          {
+            id: "dehydrated-moringa",
+            name: "Organic Moringa Powder",
+            category: "Dehydrated Products",
+            subtitle: "Nutrient-Rich Green Superfood",
+            description: "Premium quality organic moringa leaves, dehydrated carefully at low temperatures to lock in chlorophyll, vitamins, and minerals. Perfect for wellness blends and health supplements.",
+            image: "/images/dehydrated_moringa.jpg",
+            sketchKey: "dried_herbs"
+          },
+          {
+            id: "tomato-powder",
+            name: "Tomato Powder",
+            category: "Dehydrated Products",
+            subtitle: "Vibrant Color & Rich Tangy Flavor",
+            description: "Made from ripe, selected red tomatoes dehydrated under strict sanitary conditions. Delivers concentrated tomato flavor and rich natural color, ideal for soups, sauces, and dry seasonings.",
+            image: "/images/tomato_powder.jpg",
+            sketchKey: "chilli"
+          },
+          {
+            id: "tamarind-powder",
+            name: "Tamarind Powder, Imli",
+            category: "Dehydrated Products",
+            subtitle: "Pure Tangy Tamarind Concentrate",
+            description: "Processed from high-grade natural tamarind pods. Dehydrated and ground to a free-flowing powder that adds an authentic tangy taste to spice mixes, sauces, and snacks.",
+            image: "/images/tamarind_powder.jpg",
+            sketchKey: "ginger"
+          },
+          {
+            id: "palak-powder",
+            name: "Palak20",
+            category: "Dehydrated Products",
+            subtitle: "Vibrant Green Nutritional Powder",
+            description: "Carefully selected fresh spinach leaves, thoroughly washed, dehydrated, and finely ground. Rich in iron and fiber, ideal for color enhancement and nutritional fortification in food products.",
+            image: "/images/palak_powder.jpg",
+            sketchKey: "dried_herbs"
+          },
+          {
+            id: "kasuri-methi",
+            name: "Kasthuri Meethi",
+            category: "Dehydrated Products",
+            subtitle: "Aromatic & Premium Quality",
+            description: "Finest quality dried fenugreek leaves, dried under pristine conditions. Essential for adding the authentic restaurant-style rich aroma and flavor to masalas, curries, and gravies.",
+            image: "/images/kasuri_methi.jpg",
+            sketchKey: "dried_herbs"
+          },
+          {
+            id: "green-chilli-powder",
+            name: "Green chilli powde",
+            category: "Dehydrated Products",
+            subtitle: "Sharp Spicy Heat & Natural Green Color",
+            description: "Processed from fresh, hot green chillies dried hygienically. Retains the authentic sharp heat and natural green pigment, ideal for snacks, instant noodles, and seasoning blends.",
+            image: "/images/green_chilli_powder.jpg",
+            sketchKey: "chilli"
+          },
+          {
+            id: "mint-powder",
+            name: "Mint Powder, Pudhina",
+            category: "Dehydrated Products",
+            subtitle: "Cooling Herb Concentrate",
+            description: "Finely ground dehydrated mint leaves. Captures the refreshing, cooling taste and aroma of fresh pudina leaves. Widely used in dry seasonings, chutneys, beverages, and spice blends.",
+            image: "/images/mint_powder.jpg",
+            sketchKey: "dried_herbs"
+          },
+          {
+            id: "pink-onion-powder",
+            name: "Pink Onion powder",
+            category: "Dehydrated Products",
+            subtitle: "Sweet & Pungent Flavor Profile",
+            description: "Prepared from fresh pink onions. Ground to a fine, free-flowing powder that adds the signature sweet-savory onion notes to dry gravies, sauces, dressings, and snack seasonings.",
+            image: "/images/pink_onion_powder.jpg",
+            sketchKey: "ground_spices"
+          },
+          {
+            id: "white-onion-powder",
+            name: "white onion powder",
+            category: "Dehydrated Products",
+            subtitle: "Mellow Sweetness & Culinary Versatility",
+            description: "Made from select white onions, processed hygienically to zero moisture clumping. Delivers a clean, sweet-savory onion flavor without the moisture or texture of fresh onions, perfect for institutional foods.",
+            image: "/images/white_onion_powder.jpg",
+            sketchKey: "ground_spices"
+          },
+          {
+            id: "natural-moringa-powder",
+            name: "Natural Moringa powder",
+            category: "Dehydrated Products",
+            subtitle: "Pure Natural Green Superfood",
+            description: "Premium grade natural moringa leaves dried under shade and ground finely. Packed with rich nutrients and natural aroma, suitable for standard culinary and health food uses.",
+            image: "/images/natural_moringa_powder.jpg",
             sketchKey: "dried_herbs"
           }
         ]);
