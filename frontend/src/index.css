@@ -1462,22 +1462,177 @@ img {
 
 /* --- FOOTER --- */
 .footer {
-  background-color: var(--color-navy-dark);
-  color: rgba(255, 255, 255, 0.6);
-  padding: 60px 0 40px;
+  background-color: #111518; /* Solid premium dark slate */
+  color: rgba(255, 255, 255, 0.65);
+  padding: 80px 0 40px;
   font-size: 14px;
   position: relative;
   z-index: 5;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.footer-social-link {
-  color: rgba(255, 255, 255, 0.6);
-  transition: var(--transition-smooth);
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 0.9fr 1fr;
+  gap: 50px;
+  margin-bottom: 60px;
 }
 
-.footer-social-link:hover {
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.footer-logo span {
+  font-weight: 400;
   color: var(--color-rust);
-  transform: translateY(-1px);
+}
+
+.footer-brand-desc {
+  line-height: 1.7;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-col-title {
+  font-family: var(--font-title);
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--color-rust);
+}
+
+.footer-links-list,
+.footer-contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.footer-links-list a {
+  color: rgba(255, 255, 255, 0.65);
+  transition: var(--transition-smooth);
+  font-size: 13.5px;
+  display: inline-block;
+}
+
+.footer-links-list a:hover {
+  color: var(--color-rust);
+  transform: translateX(4px);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.contact-item.align-start {
+  align-items: flex-start;
+}
+
+.contact-icon {
+  color: var(--color-rust);
+  flex-shrink: 0;
+}
+
+.mt-1 {
+  margin-top: 4px;
+}
+
+.contact-link {
+  color: rgba(255, 255, 255, 0.65);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: #ffffff;
+}
+
+.contact-text {
+  text-align: left;
+}
+
+/* Social Media Buttons */
+.footer-social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition-smooth);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-btn:hover {
+  background-color: var(--color-rust);
+  color: #ffffff;
+  border-color: var(--color-rust);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(208, 92, 61, 0.3);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.copyright-text {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.credit-text {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
 }
 
 /* --- DECORATIVE BACKGROUND HERBS/LEAVES --- */
