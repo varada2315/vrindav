@@ -3444,17 +3444,17 @@ img {
 
 /* --- B2B GLOBAL PRESENCE MAP SECTION --- */
 .global-presence-section {
-  background-color: #111518; /* Dark premium slate matching design image */
-  padding: 100px 0;
+  background-color: var(--bg-primary); /* Matches the warm off-white layout */
+  padding: 80px 0;
   overflow: hidden;
   position: relative;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .presence-header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -3468,17 +3468,17 @@ img {
   text-transform: uppercase;
   letter-spacing: 2px;
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .presence-title {
   font-family: var(--font-title);
-  font-size: 38px;
+  font-size: 32px; /* Slightly reduced for better proportion */
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-dark); /* Matches site header color */
   line-height: 1.3;
   letter-spacing: -0.5px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .presence-divider {
@@ -3489,19 +3489,20 @@ img {
 }
 
 .presence-map-wrapper {
-  max-width: 1000px;
-  margin: 0 auto 50px;
+  max-width: 760px; /* Reduced width to make the section compact */
+  margin: 0 auto 40px;
   padding: 0 20px;
 }
 
 .presence-map-container {
   position: relative;
   width: 100%;
-  border-radius: 24px;
-  background-color: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.04);
-  padding: 30px;
+  border-radius: 20px;
+  background-color: #ffffff; /* Clean white card container */
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Soft gray border */
+  padding: 20px;
   box-sizing: border-box;
+  box-shadow: var(--shadow-md); /* Soft premium shadow */
 }
 
 .dotted-world-map-img {
@@ -3509,7 +3510,9 @@ img {
   height: auto;
   display: block;
   border-radius: 12px;
-  opacity: 0.85;
+  filter: invert(1); /* Invert so background is white and dots are dark slate */
+  mix-blend-mode: multiply; /* Blends white background into the card container */
+  opacity: 0.8;
 }
 
 /* Pulsing Pins */
@@ -3600,23 +3603,23 @@ img {
 }
 
 .presence-footer-badge .serving-text {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--text-dark); /* Changed from white to match UI */
   letter-spacing: -0.5px;
 }
 
 .presence-footer-badge .serving-number {
-  font-size: 38px;
+  font-size: 32px;
   font-weight: 800;
   color: var(--color-rust); /* Bold red color */
   line-height: 1;
 }
 
 .presence-footer-badge .serving-countries-text {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--text-dark); /* Changed from white to match UI */
   letter-spacing: -0.5px;
 }
 
