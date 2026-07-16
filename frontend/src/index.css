@@ -3504,10 +3504,12 @@ img {
   box-sizing: border-box;
 }
 
-.dotted-world-map-svg {
+.dotted-world-map-img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 12px;
+  opacity: 0.85;
 }
 
 /* Pulsing Pins */
