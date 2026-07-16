@@ -13,6 +13,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
     <header className="header">
       <div className="container header-container">
         <a href="#" onClick={(e) => handleLinkClick(e, 'home')} className="logo">
+          <img src="/images/logo.jpg" alt="Vrindav Enterprises Logo" className="logo-img" />
           Vrindav<span> Enterprises</span>
         </a>
         
