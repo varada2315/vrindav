@@ -73,6 +73,15 @@ const App = () => {
             sketchKey: "chilli"
           },
           {
+            id: "natural-turmeric",
+            name: "Natural Turmeric Powder",
+            category: "Natural Spices & Herbal Products",
+            subtitle: "High Curcumin & Natural Color",
+            description: "Finest grade natural turmeric powder sourced directly from farmers. Handpicked and ground hygienically to retain high curcumin levels, perfect for culinary and wellness diets.",
+            image: "/images/natural_turmeric.jpg",
+            sketchKey: "ginger"
+          },
+          {
             id: "dehydrated-garlic",
             name: "Dehydrated Garlic Powder",
             category: "Dehydrated Products",

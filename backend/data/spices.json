@@ -1,13 +1,13 @@
 [
   {
-    "id": "turmeric",
-    "name": "Pure Turmeric Powder",
+    "id": "natural-turmeric",
+    "name": "Natural Turmeric Powder",
     "category": "Natural Spices & Herbal Products",
     "subtitle": "High Curcumin & Natural Color",
-    "description": "Finest grade turmeric powder sourced directly from farmers. Handpicked and ground hygienically to retain high curcumin levels, perfect for culinary and wellness diets.",
-    "image": "/images/bowl_turmeric.png",
+    "description": "Finest grade natural turmeric powder sourced directly from farmers. Handpicked and ground hygienically to retain high curcumin levels, perfect for culinary and wellness diets.",
+    "image": "/images/natural_turmeric.jpg",
     "sketchKey": "ginger",
-    "tags": ["Farmer Sourced", "Hygienically Packed", "100% Pure"],
+    "tags": ["Farmer Sourced", "High Curcumin", "100% Natural"],
     "specifications": "Curcumin: 4.5% - 5.5%, Moisture: max 10%"
   },
   {
