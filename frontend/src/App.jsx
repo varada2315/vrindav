@@ -73,6 +73,15 @@ const App = () => {
             sketchKey: "chilli"
           },
           {
+            id: "red-chilli-powder",
+            name: "Red Chilli Powder",
+            category: "Natural Spices & Herbal Products",
+            subtitle: "Rich Aroma & Vibrant Taste",
+            description: "Vibrant red chilli powder ground from premium quality dried red chillies. Sourced directly from farms, it adds standard sharp heat, rich color, and robust flavor to a variety of cuisines.",
+            image: "/images/red_chilli_powder.png",
+            sketchKey: "chilli"
+          },
+          {
             id: "natural-turmeric",
             name: "Natural Turmeric Powder",
             category: "Natural Spices & Herbal Products",
@@ -80,6 +89,24 @@ const App = () => {
             description: "Finest grade natural turmeric powder sourced directly from farmers. Handpicked and ground hygienically to retain high curcumin levels, perfect for culinary and wellness diets.",
             image: "/images/natural_turmeric.jpg",
             sketchKey: "ginger"
+          },
+          {
+            id: "cumin-seed-powder",
+            name: "Cumin Seed Powder",
+            category: "Natural Spices & Herbal Products",
+            subtitle: "Warm Earthy Spice",
+            description: "Finely ground from premium grade roasted cumin seeds. It offers a warm, earthy aroma and rich savory depth, perfect for curries, gravies, seasoning blends, and everyday dishes.",
+            image: "/images/cumin_seed_powder.png",
+            sketchKey: "ground_spices"
+          },
+          {
+            id: "coriander-powder",
+            name: "Coriander Powder",
+            category: "Natural Spices & Herbal Products",
+            subtitle: "Fresh Citrusy & Aromatic Spice",
+            description: "Finely ground from premium roasted coriander seeds. It offers a warm, aromatic flavor with a hint of citrus sweetness, essential for curries, soups, marinades, and seasoning blends.",
+            image: "/images/coriander_powder.png",
+            sketchKey: "ground_spices"
           },
           {
             id: "dehydrated-garlic",

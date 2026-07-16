@@ -15,19 +15,49 @@
     "specifications": "Curcumin: 4.5% - 5.5%, Moisture: max 10%"
   },
   {
-    "id": "chilli",
+    "id": "red-chilli-powder",
     "name": "Red Chilli Powder",
     "category": "Natural Spices & Herbal Products",
     "subtitle": "Rich Aroma & Vibrant Taste",
-    "description": "Vibrant red chilli powder with outstanding consistency in color and purity. Solar-dried and ground to perfection to deliver consistent heat and flavor for food processing units.",
-    "image": "/images/bowl_chili.png",
+    "description": "Vibrant red chilli powder ground from premium quality dried red chillies. Sourced directly from farms, it adds standard sharp heat, rich color, and robust flavor to a variety of cuisines.",
+    "image": "/images/red_chilli_powder.png",
     "sketchKey": "chilli",
     "tags": [
-      "Purity Consistent",
-      "Solar Dried",
-      "No Added Color"
+      "Vibrant Red Color",
+      "Sharp Heat",
+      "100% Pure"
     ],
-    "specifications": "SHU: 20000 - 35000, Moisture: max 9%"
+    "specifications": "Pure Red Chilli Powder, Moisture: max 9%"
+  },
+  {
+    "id": "cumin-seed-powder",
+    "name": "Cumin Seed Powder",
+    "category": "Natural Spices & Herbal Products",
+    "subtitle": "Warm Earthy Spice",
+    "description": "Finely ground from premium grade roasted cumin seeds. It offers a warm, earthy aroma and rich savory depth, perfect for curries, gravies, seasoning blends, and everyday dishes.",
+    "image": "/images/cumin_seed_powder.png",
+    "sketchKey": "ground_spices",
+    "tags": [
+      "Roasted Aroma",
+      "Earthy Flavor",
+      "Premium Quality"
+    ],
+    "specifications": "Premium Cumin Seed Powder"
+  },
+  {
+    "id": "coriander-powder",
+    "name": "Coriander Powder",
+    "category": "Natural Spices & Herbal Products",
+    "subtitle": "Fresh Citrusy & Aromatic Spice",
+    "description": "Finely ground from premium roasted coriander seeds. It offers a warm, aromatic flavor with a hint of citrus sweetness, essential for curries, soups, marinades, and seasoning blends.",
+    "image": "/images/coriander_powder.png",
+    "sketchKey": "ground_spices",
+    "tags": [
+      "Citrus Notes",
+      "Aromatic Flavor",
+      "Premium Quality"
+    ],
+    "specifications": "Premium Coriander Powder"
   },
   {
     "id": "garam-masala",
