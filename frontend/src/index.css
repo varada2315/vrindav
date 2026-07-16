@@ -2561,7 +2561,7 @@ img {
 .category-showcase-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: 20px; /* Small separation gap */
   width: 100%;
 }
 
@@ -2569,9 +2569,9 @@ img {
   height: 300px;
   position: relative;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 12px; /* Smooth rounded corners */
   cursor: pointer;
-  box-shadow: none;
+  box-shadow: var(--shadow-sm);
 
   /* Scroll entrance transitions */
   opacity: 0;
@@ -3197,11 +3197,12 @@ img {
   /* CategoryShowcase tablet view overrides */
   .category-showcase-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0 !important;
+    gap: 15px !important; /* Small separation gap on tablet */
   }
 
   .category-showcase-card {
     height: 240px !important;
+    border-radius: 10px !important;
   }
 
   /* TrustStandards tablet overrides */
@@ -3340,10 +3341,12 @@ img {
   /* CategoryShowcase phone view overrides */
   .category-showcase-grid {
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important; /* Small separation gap on phone */
   }
 
   .category-showcase-card {
     height: 150px !important;
+    border-radius: 8px !important;
   }
 
   .category-showcase-card-title {
@@ -3671,5 +3674,92 @@ img {
   .serving-globe-icon {
     width: 24px;
     height: 24px;
+  }
+}
+
+/* --- LEADERSHIP STYLING --- */
+.leadership-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.leader-card {
+  width: calc(45% - 20px);
+  min-width: 320px;
+  max-width: 420px;
+  background-color: var(--bg-primary);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  padding: 35px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.leader-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(211, 84, 0, 0.3); /* Brand rust accent border on hover */
+}
+
+.leader-image-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 25px;
+  border: 4px solid var(--bg-white);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.leader-card:hover .leader-image-wrapper {
+  border-color: var(--accent-gold);
+  transform: scale(1.05);
+}
+
+.leader-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.leader-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.leader-role {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: #d35400; /* Warm rust theme accent */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.leader-bio {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .leader-card {
+    width: 100%;
+    max-width: 100%;
   }
 }

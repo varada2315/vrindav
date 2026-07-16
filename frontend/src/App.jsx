@@ -5,7 +5,6 @@ import SpecialtyGrid from './components/SpecialtyGrid';
 import AboutUs from './components/AboutUs';
 import StatsSection from './components/StatsSection';
 import CategoryShowcase from './components/CategoryShowcase';
-import IconGrid from './components/IconGrid';
 import OurSpices from './components/OurSpices';
 import SpiceList from './components/SpiceList';
 import Testimonial from './components/Testimonial';
@@ -314,7 +313,6 @@ const App = () => {
             <AboutUs />
             <StatsSection />
             <CategoryShowcase setCurrentPage={handlePageChange} setInitialCategory={setInitialCategory} />
-            <IconGrid />
             <OurSpices />
             <SpiceList spices={spices.slice(0, 3)} /> {/* Preview first 3 spices on homepage */}
             <GlobalPresence />

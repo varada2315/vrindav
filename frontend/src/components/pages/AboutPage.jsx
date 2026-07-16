@@ -1,5 +1,6 @@
 import React from 'react';
 import { BotanicalBackgroundSVG, CorianderSketchSVG, BayLeavesSketchSVG, CardamomSketchSVG } from '../SpiceSketches';
+import Leadership from '../Leadership';
 
 const trustStandards = [
   {
@@ -294,6 +295,9 @@ const AboutPage = ({ setCurrentPage }) => {
           </div>
         </div>
       </section>
+
+      {/* Leadership Section */}
+      <Leadership />
 
       {/* Trust Elements Section */}
       <section className="decor-container" style={{ padding: '80px 0', backgroundColor: 'var(--bg-primary)', borderTop: '1px solid rgba(0,0,0,0.05)' }}>
