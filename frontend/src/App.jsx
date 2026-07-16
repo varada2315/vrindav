@@ -55,15 +55,6 @@ const App = () => {
         // Fallback dataset that mimics the updated server data to keep UI functional
         setSpices([
           {
-            id: "moringa",
-            name: "Organic Moringa Powder",
-            category: "Natural Spices & Herbal Products",
-            subtitle: "Nutritional Herbal Supplement",
-            description: "Finely ground dehydrated moringa leaves loaded with vitamins and antioxidants. Popularly sourced for dietary supplements, health foods, and herbal wellness recipes.",
-            image: "/images/organic_moringa_powder.jpg",
-            sketchKey: "dried_herbs"
-          },
-          {
             id: "cinnamon-powder",
             name: "Cinnamon Powder",
             category: "Natural Spices & Herbal Products",

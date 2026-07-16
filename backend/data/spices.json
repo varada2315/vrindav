@@ -22,17 +22,6 @@
     "specifications": "SHU: 20000 - 35000, Moisture: max 9%"
   },
   {
-    "id": "moringa",
-    "name": "Herbal Moringa Powder",
-    "category": "Natural Spices & Herbal Products",
-    "subtitle": "Nutritional Herbal Supplement",
-    "description": "Finely ground dehydrated moringa leaves loaded with vitamins and antioxidants. Popularly sourced for dietary supplements, health foods, and herbal wellness recipes.",
-    "image": "/images/organic_moringa_powder.jpg",
-    "sketchKey": "dried_herbs",
-    "tags": ["Nutritional Diet", "Organic Sourced", "Rich in Antioxidants"],
-    "specifications": "100% Moringa Oleifera, Fine Mesh Powder"
-  },
-  {
     "id": "garam-masala",
     "name": "Premium Garam Masala",
     "category": "Seasoning & Blended Spices",
