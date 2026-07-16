@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const CategoryShowcase = ({ setCurrentPage }) => {
+const CategoryShowcase = ({ setCurrentPage, setInitialCategory }) => {
   const [animate, setAnimate] = useState(false);
   const sectionRef = useRef(null);
 
@@ -37,11 +37,18 @@ const CategoryShowcase = ({ setCurrentPage }) => {
       image: '/images/bowl_oregano.png',
     },
     {
-      id: 'dehydrated-products',
+      id: 'dehydrated-food-products',
       title: 'Dehydrated Food Products',
       image: '/images/temp_59.png',
     },
   ];
+
+  const handleCardClick = (title) => {
+    if (setInitialCategory) {
+      setInitialCategory(title);
+    }
+    setCurrentPage('products');
+  };
 
   return (
     <section className="category-showcase-section" ref={sectionRef}>
@@ -54,13 +61,13 @@ const CategoryShowcase = ({ setCurrentPage }) => {
 
       <div className="category-showcase-grid">
         {categories.map((cat, index) => (
-          <div 
-            key={cat.id} 
+          <div
+            key={cat.id}
             className={`category-showcase-card${animate ? ' animate-in' : ''}`}
-            onClick={() => setCurrentPage('products')}
+            onClick={() => handleCardClick(cat.title)}
             style={{ transitionDelay: `${index * 150}ms` }}
           >
-            <div 
+            <div
               className="category-showcase-card-bg"
               style={{ backgroundImage: `url('${cat.image}')` }}
             ></div>

@@ -575,8 +575,11 @@ img {
   cursor: pointer;
 }
 
-.specialty-card-masalas::before,
-.specialty-card-dehydrated::before {
+.specialty-card-dehydrated {
+  grid-column: 2 / 4;
+}
+
+.specialty-card-masalas::before {
   content: '';
   position: absolute;
   top: 0;
@@ -588,9 +591,24 @@ img {
   transition: background 0.4s ease;
 }
 
-.specialty-card-masalas:hover::before,
-.specialty-card-dehydrated:hover::before {
+.specialty-card-dehydrated::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, rgba(32, 41, 47, 0.65) 0%, rgba(32, 41, 47, 0.05) 100%);
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+.specialty-card-masalas:hover::before {
   background: rgba(32, 41, 47, 0.3);
+}
+
+.specialty-card-dehydrated:hover::before {
+  background: linear-gradient(to right, rgba(32, 41, 47, 0.5) 0%, rgba(32, 41, 47, 0) 100%);
 }
 
 .specialty-img-card-content {
@@ -1329,9 +1347,9 @@ img {
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1.9fr;
-  align-items: center;
-  gap: 70px;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 40px;
   position: relative;
   z-index: 2;
 }
@@ -3243,4 +3261,25 @@ img {
   .contact-form-card {
     padding: 25px 20px !important;
   }
+}
+
+/* Logo Card Grayscale to Color Hover Effect */
+.logo-card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo-card-hover img {
+  filter: none;
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.logo-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(211, 84, 0, 0.08) !important;
+  border-color: rgba(211, 84, 0, 0.25) !important;
+}
+
+.logo-card-hover:hover img {
+  transform: scale(1.05);
 }

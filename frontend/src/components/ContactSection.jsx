@@ -47,13 +47,13 @@ const ContactSection = () => {
         className="contact-bg-rosemary"
       />
       <div className="container">
-        <div className="contact-grid">
+        <div className="contact-grid" style={{ alignItems: 'stretch' }}>
           
           {/* Left Column: White Card with Yellow Blob Background */}
-          <div className="contact-left">
+          <div className="contact-left" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
             <div className="contact-blob-bg"></div>
             
-            <div className="contact-card">
+            <div className="contact-card" style={{ display: 'flex', flexDirection: 'column', height: '100%', boxSizing: 'border-box', flex: 1 }}>
               <div className="contact-card-title">Contact Us</div>
               
               <div className="contact-info-block">
@@ -66,12 +66,12 @@ const ContactSection = () => {
                 <p style={{ fontSize: '13px', fontWeight: '500', color: '#777', marginTop: '4px' }}>Info@vrindaventerprise.com</p>
               </div>
               
-              <div className="contact-info-block">
+              <div className="contact-info-block" style={{ marginBottom: '40px' }}>
                 <h4>Working Hours</h4>
                 <p>9am - 8pm</p>
               </div>
               
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: 'auto' }}>
                 <a href="https://wa.me/917647096525" target="_blank" rel="noopener noreferrer" className="btn-link" style={{ alignSelf: 'flex-start' }}>Direct WhatsApp Chat</a>
                 <button 
                   className="btn-pill-solid" 
@@ -84,13 +84,23 @@ const ContactSection = () => {
             </div>
           </div>
           
-          {/* Right Column: Spice Bottles Image */}
-          <div className="contact-right">
-            <img 
-              src="/images/contact_bowl.png" 
-              alt="Artisanal glass spice jars" 
-              className="contact-right-img"
-            />
+          {/* Right Column: Google Maps Embed */}
+          <div className="contact-right" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+            <div className="contact-card" style={{ display: 'flex', flexDirection: 'column', height: '100%', boxSizing: 'border-box', flex: 1 }}>
+              <div className="contact-card-title">Find Us</div>
+              <div style={{ flex: 1, position: 'relative', overflow: 'hidden', borderRadius: '16px', minHeight: '300px' }}>
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118552.79373977402!2d81.0035071!3d21.1065697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a291f09c693a74b%3A0x6a053c713b190c1f!2sRajnandgaon%2C%20Chhattisgarh!5e0!3m2!1sen!2sin!4v1721123456789!5m2!1sen!2sin" 
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0, position: 'absolute', top: 0, left: 0 }} 
+                  allowFullScreen="" 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Vrindav Enterprises Location Map"
+                ></iframe>
+              </div>
+            </div>
           </div>
           
         </div>

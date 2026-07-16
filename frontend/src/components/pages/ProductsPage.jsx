@@ -5,7 +5,7 @@ const ProductsPage = ({ spices }) => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [isInquiryModalOpen, setIsInquiryModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  
+
   const [inquiryForm, setInquiryForm] = useState({ name: '', email: '', company: '', quantity: '', notes: '' });
   const [status, setStatus] = useState({ success: false, loading: false });
 
@@ -17,8 +17,8 @@ const ProductsPage = ({ spices }) => {
     'Organic Products'
   ];
 
-  const filteredSpices = activeCategory === 'All' 
-    ? spices 
+  const filteredSpices = activeCategory === 'All'
+    ? spices
     : spices.filter(spice => spice.category === activeCategory);
 
   const openInquiryModal = (product) => {
@@ -70,7 +70,7 @@ const ProductsPage = ({ spices }) => {
 
   return (
     <div style={{ backgroundColor: 'var(--bg-primary)', minHeight: '100vh', paddingBottom: '80px' }}>
-      
+
       {/* Subpage Hero Header Section */}
       <section className="products-hero-banner-section">
         <div className="products-hero-banner-content">
@@ -112,15 +112,15 @@ const ProductsPage = ({ spices }) => {
         <div className="decor-sketch decor-sketch-br">
           <BayLeavesSketchSVG />
         </div>
-        <img 
-          src="https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/spice-shop-38.png" 
-          alt="" 
+        <img
+          src="https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/spice-shop-38.png"
+          alt=""
           className="decor-rosemary decor-rosemary-right"
           style={{ top: '30%' }}
         />
-        <img 
-          src="https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/spice-shop-36.png" 
-          alt="" 
+        <img
+          src="https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/spice-shop-36.png"
+          alt=""
           className="decor-leaf decor-leaf-left"
           style={{ top: '65%' }}
         />
@@ -136,7 +136,7 @@ const ProductsPage = ({ spices }) => {
                   <h3 style={styles.productName}>{product.name}</h3>
                   <p style={styles.productSubtitle}>{product.subtitle}</p>
                   <p style={styles.productDesc}>{product.description}</p>
-                  
+
                   {product.specifications && (
                     <div style={styles.specsBox}>
                       <strong>Specifications:</strong> {product.specifications}
@@ -152,13 +152,13 @@ const ProductsPage = ({ spices }) => {
                   )}
 
                   <div style={styles.actionsBox}>
-                    <button 
+                    <button
                       onClick={() => openInquiryModal(product)}
                       style={styles.inquireBtn}
                     >
                       📩 Bulk Quote Inquiry
                     </button>
-                    <a 
+                    <a
                       href={getWhatsAppLink(product.name)}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -182,7 +182,7 @@ const ProductsPage = ({ spices }) => {
               <h3 style={modalStyles.title}>Request B2B Quote</h3>
               <button onClick={() => setIsInquiryModalOpen(false)} style={modalStyles.closeBtn}>&times;</button>
             </div>
-            
+
             <p style={{ fontSize: '13px', color: '#666', marginBottom: '15px' }}>
               Inquiring for: <strong>{selectedProduct.name}</strong> ({selectedProduct.category})
             </p>
@@ -194,7 +194,7 @@ const ProductsPage = ({ spices }) => {
               </div>
             ) : (
               <form onSubmit={handleInquirySubmit} style={modalStyles.form}>
-                
+
                 <div style={modalStyles.formGroup}>
                   <label htmlFor="name" style={modalStyles.label}>Full Name</label>
                   <input
@@ -207,7 +207,7 @@ const ProductsPage = ({ spices }) => {
                     required
                   />
                 </div>
-                
+
                 <div style={modalStyles.formGroup}>
                   <label htmlFor="email" style={modalStyles.label}>Work Email</label>
                   <input
@@ -245,7 +245,7 @@ const ProductsPage = ({ spices }) => {
                     required
                   />
                 </div>
-                
+
                 <div style={modalStyles.formGroup}>
                   <label htmlFor="notes" style={modalStyles.label}>Sourcing Requirements / Comments</label>
                   <textarea
@@ -256,10 +256,10 @@ const ProductsPage = ({ spices }) => {
                     placeholder="Packing preference, destination port, customization..."
                   />
                 </div>
-                
-                <button 
-                  type="submit" 
-                  disabled={status.loading} 
+
+                <button
+                  type="submit"
+                  disabled={status.loading}
                   style={modalStyles.submitBtn}
                 >
                   {status.loading ? 'Submitting Request...' : 'Send Inquiry Request'}

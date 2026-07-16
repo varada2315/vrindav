@@ -22,9 +22,8 @@ const Zigzag = ({ color }) => (
 
 const SpecialtyGrid = ({ setCurrentPage }) => {
   return (
-    <>
-      {/* SECTION 1: Specialty Category Highlights */}
-      <section className="specialty-section">
+    <section className="specialty-section">
+      {/* Specialty Category Highlights */}
         {/* Floating abstract herbs */}
         <img
           src="https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/spice-shop-38.png"
@@ -81,21 +80,6 @@ const SpecialtyGrid = ({ setCurrentPage }) => {
               </button>
             </div>
 
-            {/* Column 2, Row 2: Category Card (Seasoning Spices) */}
-            <div className="specialty-text-card specialty-card-organic">
-              <Zigzag color="#6c8c4c" />
-              <h3>Seasoning Spices</h3>
-              <p>
-                Exquisite seasoning spice blends to elevate the flavor of your culinary creations.
-              </p>
-              <button
-                onClick={() => setCurrentPage('products')}
-                className="btn-rect btn-rect-green"
-              >
-                Browse
-              </button>
-            </div>
-
             {/* Column 3, Row 2: Category Card (Dehydrated Food Products) */}
             <div
               className="specialty-img-card specialty-card-dehydrated"
@@ -115,55 +99,6 @@ const SpecialtyGrid = ({ setCurrentPage }) => {
         </div>
       </section>
 
-      {/* SECTION 2: B2B Sourcing & Global Exports Banners */}
-      <section className="banners-section">
-        {/* Floating abstract herbs */}
-        <img
-          src="https://ali.sandbox.etdevs.com/divi/wp-content/uploads/sites/2/2020/05/spice-shop-36.png"
-          alt=""
-          className="banners-bg-leaf"
-        />
-        <div className="container">
-          <div className="banners-grid">
-
-            {/* Left Card: B2B Agro Sourcing (Solid Terracotta background) */}
-            <div className="banner-card banner-card-club">
-              <div className="banner-card-content">
-                <Zigzag color="#ffffff" />
-                <h3>B2B Agro Sourcing</h3>
-                <p>
-                  Consistently delivering the purest ingredients processed using advanced hygienic techniques.
-                </p>
-                <button
-                  onClick={() => setCurrentPage('contact')}
-                  className="btn-rect btn-rect-black"
-                >
-                  Inquire Now
-                </button>
-              </div>
-            </div>
-
-            {/* Right Card: Global Exports (Spice background image) */}
-            <div className="banner-card banner-card-offer">
-              <div className="banner-card-content">
-                <Zigzag color="#ffffff" />
-                <h3>Global Exports</h3>
-                <p>
-                  Committed to building long-term, trust-based partnerships with B2B clients worldwide.
-                </p>
-                <button
-                  onClick={() => setCurrentPage('products')}
-                  className="btn-rect btn-rect-white"
-                >
-                  Get Quotes
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-    </>
   );
 };
 

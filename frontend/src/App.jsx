@@ -20,8 +20,26 @@ import ContactPage from './components/pages/ContactPage';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
+  const [initialCategory, setInitialCategory] = useState('All');
   const [spices, setSpices] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const handlePageChange = (page) => {
+    if (page === 'about') {
+      setCurrentPage('home');
+      setTimeout(() => {
+        const aboutEl = document.getElementById('about-section');
+        if (aboutEl) {
+          aboutEl.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+      return;
+    }
+    setCurrentPage(page);
+    if (page !== 'products') {
+      setInitialCategory('All');
+    }
+  };
 
   useEffect(() => {
     const fetchSpices = async () => {
@@ -37,56 +55,38 @@ const App = () => {
         // Fallback dataset that mimics the updated server data to keep UI functional
         setSpices([
           {
-            id: "turmeric",
-            name: "Pure Turmeric Powder",
-            category: "Natural Spices & Herbal Products",
-            subtitle: "High Curcumin & Natural Color",
-            description: "Finest grade turmeric powder sourced directly from farmers. Handpicked and ground hygienically to retain high curcumin levels, perfect for culinary and wellness diets.",
-            image: "/images/bowl_turmeric.png",
-            sketchKey: "ginger"
-          },
-          {
-            id: "chilli",
-            name: "Red Chilli Powder",
-            category: "Natural Spices & Herbal Products",
-            subtitle: "Rich Aroma & Vibrant Taste",
-            description: "Vibrant red chilli powder with outstanding consistency in color and purity. Solar-dried and ground to perfection to deliver consistent heat and flavor for food processing units.",
-            image: "/images/bowl_chili.png",
-            sketchKey: "chilli"
-          },
-          {
             id: "moringa",
             name: "Organic Moringa Powder",
             category: "Natural Spices & Herbal Products",
             subtitle: "Nutritional Herbal Supplement",
             description: "Finely ground dehydrated moringa leaves loaded with vitamins and antioxidants. Popularly sourced for dietary supplements, health foods, and herbal wellness recipes.",
-            image: "/images/bowl_oregano.png",
+            image: "/images/organic_moringa_powder.jpg",
             sketchKey: "dried_herbs"
           },
           {
-            id: "garam-masala",
-            name: "Premium Garam Masala",
-            category: "Seasoning & Blended Spices",
-            subtitle: "Authentic Indian Spice Blend",
-            description: "A secret ratio blend of cardamom, cloves, cinnamon, and black pepper. Adds authentic Indian flavor and a rich, warm aroma to B2B catering and food services.",
-            image: "/images/card_ground_spices.png",
-            sketchKey: "whole_spices"
+            id: "cinnamon-powder",
+            name: "Cinnamon Powder",
+            category: "Natural Spices & Herbal Products",
+            subtitle: "Warm Aromatic Spice",
+            description: "Finely ground cinnamon bark offering a naturally sweet aroma and warm flavor. Perfect for curries, biryanis, desserts, beverages, and baking.",
+            image: "/images/cinnamon_powder.jpg",
+            sketchKey: "cinnamon"
           },
           {
-            id: "dehydrated-onion",
-            name: "Dehydrated Onion Flakes",
-            category: "Dehydrated Products",
-            subtitle: "Long Shelf Life & Fresh Aroma",
-            description: "Premium dehydrated white and red onion flakes. Offers maximum freshness and quick rehydration, perfect for bulk distribution and canned soups or sauces.",
-            image: "/images/bowl_salt.png",
-            sketchKey: "ground_spices"
+            id: "kashmiri-chilli",
+            name: "Kashmiri Chilli Powder",
+            category: "Natural Spices & Herbal Products",
+            subtitle: "Rich Color & Mild Heat",
+            description: "Made from premium Kashmiri red chillies to provide vibrant natural color with gentle spiciness. Ideal for curries, gravies, marinades, and tandoori dishes.",
+            image: "/images/kashmiri_chilli_powder.jpg",
+            sketchKey: "chilli"
           },
           {
             id: "dehydrated-garlic",
             name: "Dehydrated Garlic Powder",
             category: "Dehydrated Products",
-            subtitle: "Pure Flavor & Zero Moisture",
-            description: "Processed from fresh garlic cloves using advanced hygienic drying technology. Delivers robust garlic flavor with zero moisture clumping, ideal for seasoning packs.",
+            subtitle: "Premium Garlic Seasoning",
+            description: "Made from carefully selected garlic cloves and finely ground to deliver rich garlic flavor in a convenient powder form. Perfect for soups, sauces, marinades, and everyday cooking.",
             image: "/images/dehydrated_garlic.jpg",
             sketchKey: "ground_spices"
           },
@@ -105,15 +105,15 @@ const App = () => {
             category: "Organic Products",
             subtitle: "Certified Superfood Powder",
             description: "Strictly organic moringa leaf powder. Verified free of pesticides, processed hygienically under temperature-controlled settings to preserve natural nutrition profiles.",
-            image: "/images/bowl_oregano.png",
+            image: "/images/organic_moringa_powder.jpg",
             sketchKey: "dried_herbs"
           },
           {
             id: "dehydrated-moringa",
             name: "Organic Moringa Powder",
             category: "Dehydrated Products",
-            subtitle: "Nutrient-Rich Green Superfood",
-            description: "Premium quality organic moringa leaves, dehydrated carefully at low temperatures to lock in chlorophyll, vitamins, and minerals. Perfect for wellness blends and health supplements.",
+            subtitle: "Nutrient-Rich Herbal Supplement",
+            description: "Made from carefully selected moringa leaves, finely ground to preserve natural nutrients and antioxidants. Ideal for smoothies, herbal drinks, soups, and healthy recipes.",
             image: "/images/dehydrated_moringa.jpg",
             sketchKey: "dried_herbs"
           },
@@ -121,71 +121,71 @@ const App = () => {
             id: "tomato-powder",
             name: "Tomato Powder",
             category: "Dehydrated Products",
-            subtitle: "Vibrant Color & Rich Tangy Flavor",
-            description: "Made from ripe, selected red tomatoes dehydrated under strict sanitary conditions. Delivers concentrated tomato flavor and rich natural color, ideal for soups, sauces, and dry seasonings.",
+            subtitle: "Natural Tomato Seasoning",
+            description: "Made from ripe sun-dried tomatoes to deliver rich tomato flavor and vibrant color. Perfect for soups, sauces, gravies, snacks, and instant seasoning.",
             image: "/images/tomato_powder.jpg",
             sketchKey: "chilli"
           },
           {
             id: "tamarind-powder",
-            name: "Tamarind Powder, Imli",
+            name: "Tamarind Powder",
             category: "Dehydrated Products",
-            subtitle: "Pure Tangy Tamarind Concentrate",
-            description: "Processed from high-grade natural tamarind pods. Dehydrated and ground to a free-flowing powder that adds an authentic tangy taste to spice mixes, sauces, and snacks.",
+            subtitle: "Tangy Natural Seasoning",
+            description: "Finely ground tamarind powder offering authentic sweet and sour flavor for chutneys, curries, sauces, snacks, and traditional Indian recipes.",
             image: "/images/tamarind_powder.jpg",
             sketchKey: "ginger"
           },
           {
             id: "palak-powder",
-            name: "Palak20",
+            name: "Palak Powder",
             category: "Dehydrated Products",
-            subtitle: "Vibrant Green Nutritional Powder",
-            description: "Carefully selected fresh spinach leaves, thoroughly washed, dehydrated, and finely ground. Rich in iron and fiber, ideal for color enhancement and nutritional fortification in food products.",
+            subtitle: "Nutrient-Rich Spinach Powder",
+            description: "Prepared from fresh spinach leaves to retain natural nutrients, vitamins, and antioxidants. Perfect for soups, smoothies, parathas, dals, and sauces.",
             image: "/images/palak_powder.jpg",
             sketchKey: "dried_herbs"
           },
           {
             id: "kasuri-methi",
-            name: "Kasthuri Meethi",
+            name: "Kasturi Methi Powder",
             category: "Dehydrated Products",
-            subtitle: "Aromatic & Premium Quality",
-            description: "Finest quality dried fenugreek leaves, dried under pristine conditions. Essential for adding the authentic restaurant-style rich aroma and flavor to masalas, curries, and gravies.",
+            subtitle: "Aromatic Fenugreek Leaves",
+            description: "Made from premium dried fenugreek leaves to add authentic aroma and rich flavor to curries, gravies, dals, and traditional Indian recipes.",
             image: "/images/kasuri_methi.jpg",
             sketchKey: "dried_herbs"
           },
           {
             id: "green-chilli-powder",
-            name: "Green chilli powde",
+            name: "Green Chilli Powder",
             category: "Dehydrated Products",
-            subtitle: "Sharp Spicy Heat & Natural Green Color",
-            description: "Processed from fresh, hot green chillies dried hygienically. Retains the authentic sharp heat and natural green pigment, ideal for snacks, instant noodles, and seasoning blends.",
+            subtitle: "Fresh & Fiery Chilli Powder",
+            description: "Made from carefully selected green chillies to deliver vibrant color, fresh aroma, and spicy heat to curries, sauces, and marinades.",
             image: "/images/green_chilli_powder.jpg",
             sketchKey: "chilli"
           },
           {
             id: "mint-powder",
-            name: "Mint Powder, Pudhina",
+            name: "Mint Powder",
             category: "Dehydrated Products",
-            subtitle: "Cooling Herb Concentrate",
-            description: "Finely ground dehydrated mint leaves. Captures the refreshing, cooling taste and aroma of fresh pudina leaves. Widely used in dry seasonings, chutneys, beverages, and spice blends.",
+            subtitle: "Refreshing Herbal Seasoning",
+            description: "Prepared from naturally dried mint leaves to provide cooling freshness and aroma. Ideal for raitas, chutneys, beverages, snacks, and marinades.",
             image: "/images/mint_powder.jpg",
             sketchKey: "dried_herbs"
           },
           {
             id: "pink-onion-powder",
-            name: "Pink Onion powder",
+            name: "Pink Onion Powder",
             category: "Dehydrated Products",
-            subtitle: "Sweet & Pungent Flavor Profile",
-            description: "Prepared from fresh pink onions. Ground to a fine, free-flowing powder that adds the signature sweet-savory onion notes to dry gravies, sauces, dressings, and snack seasonings.",
+            subtitle: "Natural Onion Seasoning",
+            description: "Made from premium pink onions to provide mild sweetness and savory depth. Perfect for soups, sauces, curries, marinades, and seasoning blends.",
             image: "/images/pink_onion_powder.jpg",
             sketchKey: "ground_spices"
           },
           {
             id: "white-onion-powder",
-            name: "white onion powder",
+            name: "White Onion Powder",
             category: "Dehydrated Products",
-            subtitle: "Mellow Sweetness & Culinary Versatility",
-            description: "Made from select white onions, processed hygienically to zero moisture clumping. Delivers a clean, sweet-savory onion flavor without the moisture or texture of fresh onions, perfect for institutional foods.",
+            subtitle: "Mild & Aromatic Onion Powder",
+            description: "Prepared from premium white onions to deliver mild sweetness and consistent flavor. Perfect for soups, gravies, sauces, marinades, and snacks.",
             image: "/images/white_onion_powder.jpg",
             sketchKey: "ground_spices"
           },
@@ -200,28 +200,28 @@ const App = () => {
           },
           {
             id: "tomato-sweet-masala",
-            name: "Tomato sweet masala",
+            name: "Tomato Special Masala",
             category: "Seasoning & Blended Spices",
-            subtitle: "Tangy & Sweet Seasoning Blend",
-            description: "A delicious blend of sweet, tangy tomato flavor and aromatic spices. Perfect for flavoring potato chips, popcorn, snacks, and finger foods.",
+            subtitle: "Tangy & Flavorful Seasoning Blend",
+            description: "A specially crafted spice blend designed to enhance tomato-based dishes with the perfect balance of tanginess, mild spice, and rich aroma. Ideal for curries, gravies, soups, sauces, and fusion recipes.",
             image: "/images/tomato_sweet_masala.jpg",
             sketchKey: "chilli"
           },
           {
             id: "shahi-biryani-masala",
-            name: "Shahi Biriyani masala",
+            name: "Shahi Biryani Masala",
             category: "Seasoning & Blended Spices",
-            subtitle: "Royal Aromatic Spice Blend",
-            description: "Crafted from select royal spices like cardamom, mace, nutmeg, and cinnamon. Imparts a rich, celebratory aroma and authentic royal taste to slow-cooked rice and biryani dishes.",
+            subtitle: "Royal Aromatic Biryani Blend",
+            description: "An authentic blend of premium spices that delivers rich aroma, balanced heat, and traditional Mughlai flavor. Perfect for preparing delicious vegetarian and non-vegetarian biryani.",
             image: "/images/shahi_biryani_masala.jpg",
             sketchKey: "whole_spices"
           },
           {
             id: "schezwan-masala",
-            name: "Schezwan masala",
+            name: "Schezwan Masala",
             category: "Seasoning & Blended Spices",
-            subtitle: "Fiery Indo-Chinese Seasoning",
-            description: "A robust blend of fiery red chillies, garlic, ginger, and Sichuan pepper. Adds the authentic, spicy-tangy kick of Indo-Chinese street style Schezwan cuisine to fried rice, noodles, and stir-fries.",
+            subtitle: "Bold Indo-Chinese Seasoning",
+            description: "A fiery blend of herbs and spices inspired by authentic Indo-Chinese cuisine. Ideal for noodles, fried rice, Manchurian, stir-fries, and fusion snacks.",
             image: "/images/schezwan_masala.jpg",
             sketchKey: "chilli"
           },
@@ -229,8 +229,8 @@ const App = () => {
             id: "sambar-masala",
             name: "Sambar Masala",
             category: "Seasoning & Blended Spices",
-            subtitle: "Traditional South Indian Stew Spice",
-            description: "Authentic combination of roasted lentils, coriander, cumin, fenugreek, and red chillies. Creates the signature hearty aroma and tangy flavor of traditional South Indian lentil sambar stew.",
+            subtitle: "Authentic South Indian Blend",
+            description: "Prepared using carefully roasted spices and lentils to create traditional South Indian sambar with rich aroma, balanced spice, and delicious taste.",
             image: "/images/sambar_masala.jpg",
             sketchKey: "ginger"
           },
@@ -238,8 +238,8 @@ const App = () => {
             id: "sabji-masala",
             name: "Sabji Masala",
             category: "Seasoning & Blended Spices",
-            subtitle: "All-in-One Daily Vegetable Seasoning",
-            description: "A versatile everyday masala blend that enhances the natural taste of green vegetables and dry curries. Carefully balanced to provide delicious taste, texture, and aroma to daily meals.",
+            subtitle: "Everyday Vegetable Seasoning",
+            description: "A balanced spice blend specially made to enhance the flavor of dry and gravy vegetable dishes with rich aroma and authentic taste.",
             image: "/images/sabji_masala.jpg",
             sketchKey: "ground_spices"
           },
@@ -247,26 +247,26 @@ const App = () => {
             id: "pizza-masala",
             name: "Pizza Masala",
             category: "Seasoning & Blended Spices",
-            subtitle: "Classic Herb & Spice Pizza Seasoning",
-            description: "An aromatic blend of dehydrated oregano, basil, garlic, chilli flakes, and spices. Perfectly balanced to add the classic Italian pizzeria flavor to homemade pizzas, garlic breads, and toasted sandwiches.",
+            subtitle: "Premium Italian Herb Blend",
+            description: "A premium seasoning made with selected herbs and spices to deliver authentic Italian flavor for pizzas, garlic bread, pasta, sandwiches, and baked dishes.",
             image: "/images/pizza_masala.jpg",
             sketchKey: "dried_herbs"
           },
           {
             id: "peri-peri-masala",
-            name: "Peri peri Masala",
+            name: "Peri Peri Masala",
             category: "Seasoning & Blended Spices",
-            subtitle: "Spicy & Tangy African Bird's Eye Spice",
-            description: "A fiery blend of dehydrated African bird's eye chilli, garlic, citrus notes, and warm spices. Imparts a sharp, tongue-tingling tangy heat to French fries, grilled paneer, and roasted snacks.",
+            subtitle: "Fiery & Tangy Seasoning",
+            description: "A bold blend of chillies, herbs, and spices delivering spicy heat with smoky and tangy notes. Perfect for fries, popcorn, grilled vegetables, pasta, and snacks.",
             image: "/images/peri_peri_masala.jpg",
             sketchKey: "chilli"
           },
           {
             id: "pav-bhaji-masala",
-            name: "PavBhaji Masala",
+            name: "Pav Bhaji Masala",
             category: "Seasoning & Blended Spices",
-            subtitle: "Authentic Mumbai Street Style Blend",
-            description: "A rich, flavorful blend of dry mango, coriander, cumin, fennel, and star anise. Specifically formulated to give a robust, delicious Mumbai street food taste to mashed vegetable curries.",
+            subtitle: "Authentic Mumbai Style Blend",
+            description: "A flavorful spice blend that brings authentic Mumbai-style pav bhaji to life with rich aroma, vibrant color, and perfectly balanced spices.",
             image: "/images/pav_bhaji_masala.jpg",
             sketchKey: "whole_spices"
           },
@@ -274,8 +274,8 @@ const App = () => {
             id: "pasta-masala",
             name: "Pasta Masala",
             category: "Seasoning & Blended Spices",
-            subtitle: "Herb-Infused Pasta Seasoning",
-            description: "Crafted from select dry garlic, onion, pepper, and dehydrated Italian herbs. Designed to create a delicious, savory gravy base and coat pasta shells with a warm flavor profile.",
+            subtitle: "Italian Pasta Seasoning",
+            description: "A delicious blend of herbs and spices that enhances white sauce, red sauce, and fusion pasta recipes with rich aroma and balanced flavor.",
             image: "/images/pasta_masala.jpg",
             sketchKey: "dried_herbs"
           },
@@ -283,8 +283,8 @@ const App = () => {
             id: "papad-masala",
             name: "Papad Masala",
             category: "Seasoning & Blended Spices",
-            subtitle: "Spicy Black Pepper Papad Seasoning",
-            description: "A traditional blend of black pepper, asafoetida, cumin, and dry ginger. Sprinkled over raw and roasted papads to add a sharp, pungent bite and assist in digestion.",
+            subtitle: "Spicy Tangy Papad Seasoning",
+            description: "A mouthwatering spice blend specially prepared for roasted and fried papad. Also perfect for salads, fruits, and snacks.",
             image: "/images/papad_masala.jpg",
             sketchKey: "ground_spices"
           }
@@ -308,11 +308,11 @@ const App = () => {
       case 'home':
         return (
           <>
-            <Hero setCurrentPage={setCurrentPage} />
-            <SpecialtyGrid setCurrentPage={setCurrentPage} />
+            <Hero setCurrentPage={handlePageChange} />
+            <SpecialtyGrid setCurrentPage={handlePageChange} />
             <AboutUs />
             <StatsSection />
-            <CategoryShowcase setCurrentPage={setCurrentPage} />
+            <CategoryShowcase setCurrentPage={handlePageChange} setInitialCategory={setInitialCategory} />
             <IconGrid />
             <OurSpices />
             <SpiceList spices={spices.slice(0, 3)} /> {/* Preview first 3 spices on homepage */}
@@ -321,25 +321,25 @@ const App = () => {
           </>
         );
       case 'products':
-        return <ProductsPage spices={spices} />;
+        return <ProductsPage spices={spices} initialCategory={initialCategory} setInitialCategory={setInitialCategory} />;
       case 'about':
-        return <AboutPage setCurrentPage={setCurrentPage} />;
+        return <AboutPage setCurrentPage={handlePageChange} />;
       case 'b2b':
         return <B2bPage />;
       case 'contact':
         return <ContactPage />;
       default:
-        return <Hero setCurrentPage={setCurrentPage} />;
+        return <Hero setCurrentPage={handlePageChange} />;
     }
   };
 
   return (
     <div id="layout-container" style={{ width: '100%' }}>
-      <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Header currentPage={currentPage} setCurrentPage={handlePageChange} />
       <main>
         {renderPage()}
       </main>
-      <Footer setCurrentPage={setCurrentPage} />
+      <Footer setCurrentPage={handlePageChange} />
     </div>
   );
 };
