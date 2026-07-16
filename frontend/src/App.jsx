@@ -11,6 +11,7 @@ import SpiceList from './components/SpiceList';
 import Testimonial from './components/Testimonial';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import GlobalPresence from './components/GlobalPresence';
 
 // Subpages
 import AboutPage from './components/pages/AboutPage';
@@ -316,6 +317,7 @@ const App = () => {
             <IconGrid />
             <OurSpices />
             <SpiceList spices={spices.slice(0, 3)} /> {/* Preview first 3 spices on homepage */}
+            <GlobalPresence />
             <Testimonial />
             <ContactSection />
           </>
