@@ -3444,12 +3444,12 @@ img {
 
 /* --- B2B GLOBAL PRESENCE MAP SECTION --- */
 .global-presence-section {
-  background-color: var(--bg-primary); /* Matches the warm off-white layout */
+  background-color: #0b0d0f; /* Deep dark B2B slate background matching design */
   padding: 80px 0;
   overflow: hidden;
   position: relative;
-  border-top: 1px solid rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .presence-header {
@@ -3473,9 +3473,9 @@ img {
 
 .presence-title {
   font-family: var(--font-title);
-  font-size: 32px; /* Slightly reduced for better proportion */
+  font-size: 32px; /* Proportional B2B font size */
   font-weight: 800;
-  color: var(--text-dark); /* Matches site header color */
+  color: #ffffff; /* White title for dark theme */
   line-height: 1.3;
   letter-spacing: -0.5px;
   margin-bottom: 15px;
@@ -3489,8 +3489,8 @@ img {
 }
 
 .presence-map-wrapper {
-  max-width: 760px; /* Reduced width to make the section compact */
-  margin: 0 auto 40px;
+  max-width: 760px; /* Reduced width to make the section compact and neat */
+  margin: 0 auto 45px;
   padding: 0 20px;
 }
 
@@ -3498,11 +3498,9 @@ img {
   position: relative;
   width: 100%;
   border-radius: 20px;
-  background-color: #ffffff; /* Clean white card container */
-  border: 1px solid rgba(0, 0, 0, 0.05); /* Soft gray border */
-  padding: 20px;
+  background-color: transparent; /* Blends natively into the deep slate background */
+  padding: 10px;
   box-sizing: border-box;
-  box-shadow: var(--shadow-md); /* Soft premium shadow */
 }
 
 .dotted-world-map-img {
@@ -3510,9 +3508,7 @@ img {
   height: auto;
   display: block;
   border-radius: 12px;
-  filter: invert(1); /* Invert so background is white and dots are dark slate */
-  mix-blend-mode: multiply; /* Blends white background into the card container */
-  opacity: 0.8;
+  opacity: 0.9; /* Subtle opacity for clean map contrast */
 }
 
 /* Pulsing Pins */
@@ -3605,7 +3601,7 @@ img {
 .presence-footer-badge .serving-text {
   font-size: 22px;
   font-weight: 500;
-  color: var(--text-dark); /* Changed from white to match UI */
+  color: #ffffff; /* White text for dark theme */
   letter-spacing: -0.5px;
 }
 
@@ -3619,7 +3615,7 @@ img {
 .presence-footer-badge .serving-countries-text {
   font-size: 22px;
   font-weight: 500;
-  color: var(--text-dark); /* Changed from white to match UI */
+  color: #ffffff; /* White text for dark theme */
   letter-spacing: -0.5px;
 }
 
