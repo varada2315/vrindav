@@ -42,7 +42,7 @@ const ContactPage = () => {
   const waLink = "https://wa.me/917647096525?text=Hello%20Vrindav%20Enterprises%2C%20I%20have%20an%20inquiry%20regarding%20spices%20supply.";
 
   return (
-    <div style={{ paddingTop: '120px', backgroundColor: 'var(--bg-primary)', minHeight: '100vh', paddingBottom: '80px' }}>
+    <div style={{ paddingTop: '0px', backgroundColor: 'var(--bg-primary)', minHeight: '100vh', paddingBottom: '80px' }}>
       
       {/* Subpage Hero Header Section */}
       <section className="contact-hero-section">

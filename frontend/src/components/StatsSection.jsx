@@ -67,7 +67,7 @@ const StatsSection = () => {
   const stats = [
     {
       id: 'products',
-      value: 50,
+      value: 20,
       suffix: '+',
       label: 'Spice Products',
       description: 'Premium powders, custom blends, seasonings, and dehydrated varieties.',

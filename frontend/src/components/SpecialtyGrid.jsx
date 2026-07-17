@@ -40,7 +40,7 @@ const SpecialtyGrid = ({ setCurrentPage }) => {
             >
               <div className="specialty-tall-card-content">
                 <Zigzag color="#e5a93b" />
-                <h3>50+ Spice<br />Products</h3>
+                <h3>20+ Spice<br />Products</h3>
                 <button
                   onClick={() => setCurrentPage('products')}
                   className="btn-rect btn-rect-white"

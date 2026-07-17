@@ -593,6 +593,14 @@ img {
   justify-content: flex-start;
   color: var(--bg-white);
   position: relative;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.specialty-tall-card:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
 }
 
 .specialty-tall-card::before {
@@ -602,8 +610,20 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(32, 41, 47, 0.4);
+  background: rgba(32, 41, 47, 0.45);
   z-index: 1;
+  transition: background 0.4s ease;
+}
+
+.specialty-tall-card:hover::before {
+  background: rgba(32, 41, 47, 0.3);
+}
+
+.specialty-tall-card:hover .btn-rect-white {
+  background-color: var(--color-rust);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(211, 84, 0, 0.35);
 }
 
 .specialty-tall-card-content {
@@ -1555,7 +1575,7 @@ img {
   font-family: var(--font-sans);
   font-size: 22px;
   font-weight: 800;
-  color: #ffffff;
+  color: #e67e22;
   letter-spacing: -0.5px;
   margin-bottom: 20px;
   text-decoration: none;
@@ -2242,6 +2262,13 @@ img {
   padding: 30px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
   transition: transform 0.3s ease;
+}
+
+.contact-page-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: start;
 }
 
 .contact-hero-section {
@@ -3488,6 +3515,39 @@ img {
   .contact-form-card {
     padding: 25px 20px !important;
   }
+
+  /* Mobile Logo & Text Scaling */
+  .logo {
+    font-size: 18px !important;
+    gap: 8px !important;
+  }
+
+  .logo-img {
+    height: 44px !important;
+  }
+
+  /* About values card mobile padding override */
+  .promo-card-3 {
+    padding: 30px 20px !important;
+  }
+
+  /* Yellow Shape underlay mobile offset override */
+  .yellow-shape-underlay {
+    left: -15px !important;
+    border-radius: 20px 10px 20px 10px !important;
+  }
+
+  /* Product Page actions box stack on mobile */
+  .product-actions-box {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .product-actions-box button,
+  .product-actions-box a {
+    width: 100% !important;
+    text-align: center !important;
+  }
 }
 
 /* Logo Card Grayscale to Color Hover Effect */
@@ -3630,6 +3690,11 @@ img {
   transform: scale(1.4);
 }
 
+.presence-pin-wrapper:hover .pin-label-text {
+  color: var(--accent-gold) !important;
+  text-shadow: 0 1px 4px rgba(211, 84, 0, 0.95);
+}
+
 /* Pin Tooltip styling */
 .pin-tooltip {
   position: absolute;
@@ -3740,6 +3805,14 @@ img {
   .serving-globe-icon {
     width: 24px;
     height: 24px;
+  }
+
+  /* Hide presence pins labels on mobile except India */
+  .pin-label-text {
+    display: none !important;
+  }
+  .presence-pin-wrapper.source-pin .pin-label-text {
+    display: block !important;
   }
 }
 

@@ -77,7 +77,7 @@ const ProductsPage = ({ spices }) => {
           <span className="products-hero-banner-subtitle">The Finest Spices and Herbs</span>
           <h1 className="products-hero-banner-title">Our Products</h1>
           <p className="products-hero-banner-desc">
-            Exporter of pure natural agro products, offering 50+ blended seasonings, dehydrated ingredients, and certified organic herbs.
+            Exporter of pure natural agro products, offering 20+ blended seasonings, dehydrated ingredients, and certified organic herbs.
           </p>
         </div>
       </section>
@@ -151,7 +151,7 @@ const ProductsPage = ({ spices }) => {
                     </div>
                   )}
 
-                  <div style={styles.actionsBox}>
+                  <div className="product-actions-box" style={styles.actionsBox}>
                     <button
                       onClick={() => openInquiryModal(product)}
                       style={styles.inquireBtn}
@@ -446,11 +446,11 @@ const modalStyles = {
     height: '100%',
     backgroundColor: 'rgba(15, 23, 42, 0.6)',
     backdropFilter: 'blur(4px)',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: 'grid',
+    placeItems: 'center',
     zIndex: 1000,
-    padding: '20px'
+    padding: '20px',
+    overflowY: 'auto'
   },
   content: {
     backgroundColor: '#ffffff',

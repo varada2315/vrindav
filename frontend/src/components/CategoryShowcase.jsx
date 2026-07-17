@@ -23,7 +23,7 @@ const CategoryShowcase = ({ setCurrentPage, setInitialCategory }) => {
   const categories = [
     {
       id: 'spice-products',
-      title: '50+ Spice Products',
+      title: '20+ Spice Products',
       image: '/images/card_ground_spices.png',
     },
     {

@@ -204,11 +204,11 @@ const modalStyles = {
     height: '100%',
     backgroundColor: 'rgba(15, 23, 42, 0.6)',
     backdropFilter: 'blur(4px)',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: 'grid',
+    placeItems: 'center',
     zIndex: 1000,
-    padding: '20px'
+    padding: '20px',
+    overflowY: 'auto'
   },
   content: {
     backgroundColor: '#ffffff',
