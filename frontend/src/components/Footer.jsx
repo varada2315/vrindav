@@ -111,7 +111,7 @@ const Footer = ({ setCurrentPage }) => {
                 </svg>
               </a>
               <a 
-                href="https://youtube.com/@vrindaventerprises?si=8xPuO6046uu5fSkr" 
+                href="https://www.youtube.com/@vrinda.enterprises" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="social-btn youtube"

@@ -3807,11 +3807,8 @@ img {
     height: 24px;
   }
 
-  /* Hide presence pins labels on mobile except India */
+  /* Show presence pins labels on mobile */
   .pin-label-text {
-    display: none !important;
-  }
-  .presence-pin-wrapper.source-pin .pin-label-text {
     display: block !important;
   }
 }
