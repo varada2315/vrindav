@@ -38,7 +38,7 @@ const OurSpices = () => {
             <div className="circle-text-content">
               <h2>Our<br />Spices</h2>
               <p>
-                We offer a wide range of over 20+ spice powders, blended spices, 
+                We offer a wide range of over 50+ spice powders, blended spices, 
                 seasoning spices, dehydrated food products, and Organic Spices & Herbal Products. 
                 Our commitment to delivering 100% pure agro products ensures every batch meets 
                 high standards of purity and flavor.

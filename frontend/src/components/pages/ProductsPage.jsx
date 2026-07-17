@@ -77,7 +77,7 @@ const ProductsPage = ({ spices }) => {
           <span className="products-hero-banner-subtitle">The Finest Spices and Herbs</span>
           <h1 className="products-hero-banner-title">Our Products</h1>
           <p className="products-hero-banner-desc">
-            Exporter of pure natural agro products, offering 20+ blended seasonings, dehydrated ingredients, and certified organic herbs.
+            Exporter of pure natural agro products, offering 50+ blended seasonings, dehydrated ingredients, and certified organic herbs.
           </p>
         </div>
       </section>
