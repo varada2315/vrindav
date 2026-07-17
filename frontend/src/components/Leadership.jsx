@@ -12,9 +12,8 @@ const leadershipTeam = [
     id: 'tanvi-ramani',
     name: 'Tanvi Ramani',
     role: 'CEO',
-    image: '/images/team_tanvi.png',
-    bio: 'Leading global export expansion, branding, B2B customer relationships, and ensuring our spice processing matches strict international quality standards.',
-    objectPosition: 'top'
+    image: '/images/team_tanvi.jpg',
+    bio: 'Leading global export expansion, branding, B2B customer relationships, and ensuring our spice processing matches strict international quality standards.'
   }
 ];
 

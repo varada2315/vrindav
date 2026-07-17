@@ -328,7 +328,7 @@ img {
   font-family: var(--font-sans);
   font-size: 24px;
   font-weight: 800;
-  color: var(--text-dark);
+  color: #e67e22;
   letter-spacing: -0.5px;
   display: flex;
   align-items: center;
@@ -343,7 +343,7 @@ img {
 
 .logo span {
   font-weight: 400;
-  color: var(--text-muted);
+  color: #e5a93b;
 }
 
 .nav-menu {
@@ -409,6 +409,7 @@ img {
   transform: rotate(-15deg);
   filter: drop-shadow(0 15px 25px rgba(32, 41, 47, 0.12));
   z-index: 5;
+  animation: floatJar 6s ease-in-out infinite;
 }
 
 .hero-grid {
@@ -431,10 +432,15 @@ img {
   font-family: var(--font-title);
   font-size: 86px;
   font-weight: 900;
-  color: var(--text-dark);
+  color: #e5a93b;
   margin-bottom: 25px;
   line-height: 0.95;
   letter-spacing: -2px;
+  animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-title span {
+  color: #e67e22;
 }
 
 .hero-desc {
@@ -444,10 +450,14 @@ img {
   margin-bottom: 40px;
   line-height: 1.8;
   max-width: 460px;
+  animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.15s;
 }
 
 .hero-cta-wrapper {
   display: flex;
+  animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: 0.3s;
 }
 
 .hero-cta-btn {
@@ -482,6 +492,11 @@ img {
   width: 100%;
   height: 620px;
   /* Increased from 560px */
+  animation: heroFadeInRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-plate-wrapper {
+  animation: floatPlate 8s ease-in-out infinite;
 }
 
 .hero-main-plate {
@@ -496,8 +511,55 @@ img {
 }
 
 .hero-main-plate:hover {
-  transform: scale(1.03) rotate(2deg);
+  transform: scale(1.05) rotate(2deg);
   filter: drop-shadow(0 30px 60px rgba(32, 41, 47, 0.22));
+}
+
+/* Hero Animations Keyframes */
+@keyframes heroFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroFadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatPlate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1.5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes floatJar {
+  0% {
+    transform: rotate(-15deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-12deg) translateY(-8px);
+  }
+  100% {
+    transform: rotate(-15deg) translateY(0);
+  }
 }
 
 
@@ -1497,7 +1559,7 @@ img {
 
 .footer-logo span {
   font-weight: 400;
-  color: var(--color-rust);
+  color: #e5a93b;
 }
 
 .footer-brand-desc {

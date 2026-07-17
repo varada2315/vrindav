@@ -16,7 +16,7 @@ const Hero = ({ setCurrentPage }) => {
           {/* Left Column: Title, Description & CTA */}
           <div className="hero-content">
             <h1 className="hero-title">
-              Spices & Herbs
+              Spices <span>& Herbs</span>
             </h1>
             <p className="hero-desc">
               Your trusted Supplier & Exporter of Pure and natural spices. 
@@ -35,11 +35,13 @@ const Hero = ({ setCurrentPage }) => {
           {/* Right Column: Clean Wooden Plate composition */}
           <div className="hero-image-container">
             {/* Center Wooden Plate with Spices (without the small bowl and separate herbs) */}
-            <img 
-              src="/images/hero_wooden_plate_clean_transparent.png" 
-              alt="Wooden dish with Indian spices" 
-              className="hero-main-plate"
-            />
+            <div className="hero-plate-wrapper">
+              <img 
+                src="/images/hero_wooden_plate_clean_transparent.png" 
+                alt="Wooden dish with Indian spices" 
+                className="hero-main-plate"
+              />
+            </div>
           </div>
 
         </div>

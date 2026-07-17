@@ -133,7 +133,7 @@ const Footer = ({ setCurrentPage }) => {
             &copy; 2026 Vrindav Enterprises. All Rights Reserved. Sourced & Exported under leadership of Parikshit Ramani.
           </p>
           <p className="credit-text">
-            Website designed by Globalb2bmart.com
+            
           </p>
         </div>
 
