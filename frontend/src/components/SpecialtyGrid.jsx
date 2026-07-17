@@ -40,7 +40,7 @@ const SpecialtyGrid = ({ setCurrentPage }) => {
             >
               <div className="specialty-tall-card-content">
                 <Zigzag color="#e5a93b" />
-                <h3>Spice<br />Products</h3>
+                <h3>50+ Spice<br />Products</h3>
                 <button
                   onClick={() => setCurrentPage('products')}
                   className="btn-rect btn-rect-white"
@@ -65,19 +65,17 @@ const SpecialtyGrid = ({ setCurrentPage }) => {
               </div>
             </div>
 
-            {/* Column 3, Row 1: Text Card (50+ Spice Varieties) */}
-            <div className="specialty-text-card specialty-card-recipes">
-              <Zigzag color="#e5a93b" />
-              <h3>50+ Spice Varieties</h3>
-              <p>
-                Over 50+ premium spice powders, blended spices, seasonings, and dehydrated products.
-              </p>
-              <button
-                onClick={() => setCurrentPage('products')}
-                className="btn-rect btn-rect-yellow"
-              >
-                Browse
-              </button>
+            {/* Column 3, Row 1: Quote Card */}
+            <div
+              className="specialty-img-card specialty-card-organic"
+              style={{ backgroundImage: `url('/images/card_organic.png')` }}
+              onClick={() => setCurrentPage('products')}
+            >
+              <div className="specialty-img-card-content" style={{ justifyContent: 'center', alignItems: 'center', textAlign: 'center', padding: '30px' }}>
+                <p style={{ fontStyle: 'italic', fontSize: '18px', color: '#ffffff', lineHeight: '1.6', fontWeight: '500', textShadow: '0 2px 8px rgba(0,0,0,0.8)', margin: 0 }}>
+                  "Purity in every grain, rich aroma, and unmatched quality."
+                </p>
+              </div>
             </div>
 
             {/* Column 3, Row 2: Category Card (Dehydrated Food Products) */}

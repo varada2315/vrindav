@@ -640,7 +640,8 @@ img {
 }
 
 .specialty-card-masalas,
-.specialty-card-dehydrated {
+.specialty-card-dehydrated,
+.specialty-card-organic {
   position: relative;
   overflow: hidden;
   cursor: pointer;
@@ -650,7 +651,8 @@ img {
   grid-column: 2 / 4;
 }
 
-.specialty-card-masalas::before {
+.specialty-card-masalas::before,
+.specialty-card-organic::before {
   content: '';
   position: absolute;
   top: 0;
@@ -674,7 +676,8 @@ img {
   transition: background 0.4s ease;
 }
 
-.specialty-card-masalas:hover::before {
+.specialty-card-masalas:hover::before,
+.specialty-card-organic:hover::before {
   background: rgba(32, 41, 47, 0.3);
 }
 
@@ -711,7 +714,8 @@ img {
 }
 
 .specialty-card-masalas:hover .btn-rect,
-.specialty-card-dehydrated:hover .btn-rect {
+.specialty-card-dehydrated:hover .btn-rect,
+.specialty-card-organic:hover .btn-rect {
   opacity: 1;
   transform: translateY(0);
 }
