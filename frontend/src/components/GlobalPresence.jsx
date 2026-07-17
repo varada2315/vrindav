@@ -68,7 +68,7 @@ const GlobalPresence = () => {
         {/* Section Header */}
         <div className="presence-header">
           <span className="presence-tag">Global Export Distribution</span>
-          <h2 className="presence-title">Vintage Values, Tomorrow's Technology, Global Presence</h2>
+          <h2 className="presence-title">Our Global Presence</h2>
           <div className="presence-divider"></div>
         </div>
 
